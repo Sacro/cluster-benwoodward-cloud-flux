@@ -1,6 +1,7 @@
 [tools]
 flux2 = "latest"
 k9s = "latest"
+helm = "latest"
 pre-commit = "latest"
 "npm:commitlint" = "latest"
 "npm:@commitlint/cli" = "latest"
