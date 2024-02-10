@@ -1,0 +1,7 @@
+[tools]
+flux2 = "latest"
+k9s = "latest"
+pre-commit = "latest"
+"npm:commitlint" = "latest"
+"npm:@commitlint/cli" = "latest"
+"npm:@commitlint/config-conventional" = "latest"
