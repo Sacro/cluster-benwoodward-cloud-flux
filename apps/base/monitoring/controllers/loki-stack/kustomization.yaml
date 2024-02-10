@@ -4,3 +4,4 @@ namespace: monitoring
 resources:
   - loki_release.yaml
   - promtail_release.yaml
+  - repository.yaml
