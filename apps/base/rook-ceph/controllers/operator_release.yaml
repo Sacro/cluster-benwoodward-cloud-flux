@@ -12,3 +12,5 @@ spec:
         kind: HelmRepository
         name: rook-release
       interval: 60m
+  values:
+    operatorNamespace: rook-ceph
