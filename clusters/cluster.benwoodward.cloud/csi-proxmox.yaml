@@ -14,3 +14,31 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./apps/base/csi-proxmox/controllers
+---
+apiVersion: v1
+kind: secret
+metadata:
+    name: proxmox-csi-plugin
+type: Opaque
+stringData:
+    config.yaml: ENC[AES256_GCM,data:C+6T3vt6/KCoCvMoggCzii4T58BSNGys9Skf3mOM0Sj4yofgYBzwQkBxRQPhP87VRydvTNScCf8WHafs54Ij8XO/unLpc7bztY0oq6uB9kUBYZVgPBEVXxeXLbRr7MKjZ78AM5pk0hkm3cJNc4vnmQzZeHhVi+cvBbCZqbxoFbtZGGRJT3DTBr9KW8Ifn1V1w7H6N9oiW7fEIlfMCnbQIFLjrE5s2+r0yO7Oj6cYfqkZ3z/SL2ki3A==,iv:T/6Khdv3wTcnjtswKm5NMxOh/XuZLIHq8PJ3FKejW+k=,tag:EpjMKifOOb7/H2oYiy0tqg==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age15lvm85kem62em8d2w0n9ypg6845z7r9hktv2n6jeejg6am0l9ecsa74n5p
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBlRWlYcUpkd2RiOFNXVTJH
+            aElUQnU0aVRzbE1Gc24yQXJFejVxeXdtcURrCjVxK1JDR1VhbHp5VDlPOVhUTXBY
+            WU96YnNJdFVGWG9QK3RnMGc3cU1oNlEKLS0tIHlVWFBpZEcyek5sWE5WeWhaVDhr
+            ZStTZXdIVGZYTEpyeS8rOGYvdDZvTmMK8Gglbs/C6XNTyepZ7jIk7xYyvqmP5CwJ
+            sWg98xGcf5oJpfNgH3BFvJPo1SBrfjQgQAZ1HggbxiNRjWp1CN6cug==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-03-09T16:02:57Z"
+    mac: ENC[AES256_GCM,data:W6lEww1B+CHoZOFQHJ4oEQwr2f/hGfS1/2PhzxHnPz65Tg0c5ruEEb0vMjQrt7CjaV7fsDHValezzMIVjR7m+S6jITRDxicNN+Pvs33ulSF2XKtnMkLh6IAwJlz/tAXKHDOLyt3U/OIysOQyrwQM/VDkYwoNghVCtduqZGArfow=,iv:sogMrG61goDgHTmIQhmNJheudgXBvaV4sZvWjn+kZHo=,tag:MvP0HhCedpsDNivbsOUeEA==,type:str]
+    pgp: []
+    encrypted_regex: ^stringData$
+    version: 3.8.1
