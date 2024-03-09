@@ -17,6 +17,7 @@ spec:
 ---
 apiVersion: v1
 kind: secret
+namespace: csi-proxmox
 metadata:
     name: proxmox-csi-plugin
 type: Opaque
