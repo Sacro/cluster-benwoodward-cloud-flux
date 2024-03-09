@@ -1,0 +1,16 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: proxmox-cloud-controller-manager
+  namespace: kube-system
+spec:
+  chart:
+    spec:
+      chart: proxmox-cloud-controller-manager
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: proxmox-cloud-controller-manager
+      version: 0.2.0
+  interval: 1m0s
