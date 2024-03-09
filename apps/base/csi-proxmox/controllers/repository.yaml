@@ -5,5 +5,6 @@ metadata:
   name: csi-proxmox
   namespace: csi-proxmox
 spec:
+  type: "oci"
   interval: 1m0s
   url: oci://ghcr.io/sergelogvinov/charts/proxmox-csi-plugin
