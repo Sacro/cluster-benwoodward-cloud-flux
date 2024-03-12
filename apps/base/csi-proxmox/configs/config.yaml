@@ -5,7 +5,7 @@ metadata:
     name: proxmox-csi-plugin
 type: Opaque
 stringData:
-    config.yaml: ENC[AES256_GCM,data:IP2Z1c5/R+6djCoNXP8VhuFxVyUT/QrXchTthtEhMMvF9ZvVr/fOFE3n/ZWbT/T6wQ0Pq0B6yrmr/X54ADrszNp6+GX4+VHnx588qBNawvDgGSef+xWDnN4V4sEGV16Yu05CO/K/eqdjPYm2AbeSJ6LB1X3MH/eI5TtnSOAugxZWnWfiCd7sk3e9l1hLHE69j0XratWjIthnzrNhvioBCftHo+39p1KXctBdKpZ69Ef4dR/BND70MB6rRYdeAtTwRPleZZcliAqVtrqULyEdb4lZdqGO7JMDMc2yvyF2PaIWcgM9uIR8xmFV6ttYWI3+ZlmlRneyyAyzfSKHaZMwohGo1D69r7zGhLw3xgvPqFm10OnL+KbYhFOMbhMV9CPxmg==,iv:u6ggIvp2Gv7e1sx4ju4/9GfTZTuTU9v5bZnq+l7N9Oo=,tag:XjLJg0fxGFTayvquAXyq1A==,type:str]
+    config.yaml: ENC[AES256_GCM,data:42wzlXiMH8np3yLD+AOcY7Snxc8DJ7cBdV2KWiWfC1zpFrsB+B1mADtgEUIgL4Axv7FaOGsK21YOV9/raPj3bQ2j7C686c8UI56kyiQrM/DpjZ7ELawa+1n4+JNKMdBj47vl3bMsiVLx09LpLvxNPUEhAKWoM4l+4L77uBh0HZI/U0JN61gZQWwVI7SIlWwRGLZpBG7tlzueBmMJNcdW2qWjO1Sbnpq3RXScSwzOW/MUrJzCJ85mjABT8PUh/WjxzvxpPcezbfhK1FiwtBch5l4v/4mW9DemOszJDL4TQKajgmngGW99yT0fpfG95oLrkc0VWde6iZCfOcN2PGQBk0VYfv+KWf7c3G2DRHLDi52baW1hpBYLnRbkcQoLwANFZQA=,iv:upIaE+LoVbjPKPkJFnjzzqtrXUg2uiOljIGzZpE2jxQ=,tag:MgoWg+yvu4IdH0IayiqqoQ==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -15,14 +15,14 @@ sops:
         - recipient: age15lvm85kem62em8d2w0n9ypg6845z7r9hktv2n6jeejg6am0l9ecsa74n5p
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBKNkFMOWlEb2RvOWw3b045
-            bll3OW5RY0hSaFgrV3NHa0J0OFFMYm9PWjJnCnhlYXNaRHNrZkRGWXpqVVFzbnlK
-            K2NoR0RzOWlxNTFQaW8xVWgrTU9teWcKLS0tIFdYWUI4aXM1RXlvV3hEWE16Znd1
-            VGxuZzhCMmd2am1HWGdWTFZDd25BYTAKPB0Hfw/We8OL+z5u0xOALP/SpEdfNwYV
-            r0L6u4R9w5zup7G6Vo9P7JB6YvLf3BvC5GqHirdyL0C8hMuMoVRjOg==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBNWnB3T2JQZUwzQVFhVVZl
+            UGFjSEZQcmtrdlZmT3JnUUsvNnBGSEhNZFRZClJMR0YzM1hBWTFBMHFxdDlIVk5B
+            a0FCa1R6bUVRLzhJRklhaEMybUVjWEkKLS0tIFYwYjd2U3pCajU3M0ZVOUZFSlVx
+            dG1pU2xZRW1CV21Yc08zTU5Na0FqeTgKDUJHIwO2VRRwhV6rPtViVwlIGayHcI+e
+            SvGtJQSlgRKSjPzdCoRn4FcuyWkRuypgmE+8jDkSM20vihv3PSi/mw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2024-03-12T13:54:20Z"
-    mac: ENC[AES256_GCM,data:er6nL6U4fZDloTHldJq8JAoaQmpd/bkW4grVS8+yCW5iFnuTnP6ySeHPuyhnZ1WoBri4+6BkFjpGieVYhL5mINq5zHTQ5GRYGzsHMF9oGfJ7XMIlWyD7KRuZzKeu0r9IEzb0k87Fm09jEEgHZH4QT6FpnVkTejvp4+SmPb9s10A=,iv:pHfXKsjTpVMvlJeFyRvhf2cfcM3eNFVJ7jr15TNAB5w=,tag:3w8CpB4Kog38ESS0NHTIaQ==,type:str]
+    lastmodified: "2024-03-12T16:10:22Z"
+    mac: ENC[AES256_GCM,data:q2b13cjZHOQ26JyUkle1Z5oJHpnb/wNlW7X8m8FepdR37MpZzMJE77Wjb5EHzgngbe993Vj5wMMPoQ8RW4FxRWxjUPZ8Vgt1nkirC9qNDjySEJGvYrp4D3ZOsCXCsYJEu1NC8A7G86e7ewftH3BNnidJJAVt5N6Cm4KCZKouLcs=,iv:sY5TPaJNhj8LGHRDX/WFeXcJXZnkisI4o34l6p3fvGI=,tag:pQdFlN7Y6WNnN88qDzCEMw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.8.1
