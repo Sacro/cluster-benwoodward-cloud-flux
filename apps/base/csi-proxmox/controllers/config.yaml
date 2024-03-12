@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Secret
 namespace: csi-proxmox
 metadata:
-    name: proxmox-csi-plugin
+    name: csi-proxmox-proxmox-csi-plugin
 type: Opaque
 stringData:
     config.yaml: ENC[AES256_GCM,data:9T2WijYAJQpPcs1m5sf88dfLs+hzrX5XMiXNtHQMISdPXUZkDJGJeXbkb/hyMF4ScQR3kOPXXDviMYOJA7xymy+9gy69Ice3T/GAY+Ur90yWo+xyc1JvLhhnRAC5hnVKnBQMHLXqq1teMyEYkxrXM34WM+A6EKpCqzY8fh7Ot+iBollaI8q/a4Q9byJTLqnJ4YhRMnSuZunJ4MUG7VMqIUvnaujuL8pW+GWZlFkc6z+mkTDUPTvqS2Fl7Eaj1NCQbJ8dtJNoyy3hquUPh6zWmXYActOo7MXppPV/6ghHEFOj9UUFn7iszITX6/3S8TgC3AmiAUIF9eIksD/eIzp/BDx/wKP1dkOx9sAYwAHajVUNZtLAy9YTn2ryGrHuhwt6WQ==,iv:cyXUbq7d6liVgZHrOxHGd9Stko/iq1jvQ/KO9bKocf4=,tag:9XQvnHPdbsuukNxBU1hFCQ==,type:str]
