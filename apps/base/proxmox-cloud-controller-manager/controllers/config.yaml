@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Secret
+namespace: kube-system
+metadata:
+    name: proxmox-cloud-controller-manager
+type: Opaque
+stringData:
+    config: ENC[AES256_GCM,data:XYcTifa5EAA/bwm1xSmzgW56lpArKlXDnzJ28WiSnsPEcU2iki4S5zwQ6Nqxf0AkyWJBSQtoRTJ/vwSWlQdZmZIbtn0IC5sMHWqKxjznyYTqp7NFEabzkxE+u7j42v+St1tuTtl61B5SgDbBUZdQTcJutJ58iorvk37KFHe13vJUEduFg/9wvojlWTl0Y9ONV/Fbz0n6UbjmOkjyizNMR+wwqvXasNfxdl6NF/Mt0+yzew+T+WZ9CRzQW5r2vcT4Ym8rKwYx6XJY6JA9ak0ZchV9BYrUoTFA4omGxmfe45mvhnWMuG6uWb9R+ewnYlK9sr1JQAVAEQrKnucVJhlT4uoJirr6Xl3mKiojzi1m3a+Ait7Hiwh4cYoj1MXnhSBHGGIcLvN/6omsjsIL7wCvRjBBAD/XYasuVk5XcZPeIZ/8XO5+OCbvxyrlPvhM3cSNnwcGqCcqSXMn8IPMykIgVYxajF++YhgNG0RcZJL5SwE8XP285g2kp/IIFKPWpGgEE9SKtAGW8buHXSwDuufsC/AjtVL+OOzSJ+uz7hfFLNbpqQWiqPg2uqgcbKhlaku1xVIt0NTbDHeHPMLGApF5KpAJUZh6u3Odn9/FnLNFxkP0SJxb7+SxMba1hjD30diOqRZ0SS1WDZwYF9apoIrcaKLsoJiJB1cNnwwObvFQ8Q1wD7nDaIW8/ANnQBD8eGCC57PVYJqec9mymS3vE0dxNKxC0P1MNspA/ietmYZeDrhTa4UbKI13vc7Y+zZx6yCHhTOLS+Cw1R/0KelatbjbX048oDQqGtQ40w02gG07/q6D3ik=,iv:CGltcYIVR8qujJdU1vHxA0RPoajbY0atP4odgqLRkS0=,tag:KIZ7pH3J+jDhmp4sAsPgag==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1s4fd48e0ed0x4md2afvg2vzvvkf22kqtwy35q8djh9vjnf8encnq46wddr
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBlUkJFUFViUnIzNVArS1Zp
+            MTNac044My95MkZZc0R1MXFVd1dQVVYvZ1dzCmtHaEVaYTM3cDM2bzlLeWs4T3JF
+            anI0ZVdGRmhVZWh6NFJjT25IT244Z0UKLS0tIFRiVkRCWFJNT1k0cGN2S3NPMnJz
+            ckdpdHUvbzFKWWJkVFRTYVFiZ3kwNDAKtQbXDMZUPflhQ4mdk08uIZ+uH5g0jX1R
+            oaFbtxUe7CJDA85g5TEpNjp/q4x76v44xRWtahaysnH0KIuQ0fs8YA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-03-09T18:12:23Z"
+    mac: ENC[AES256_GCM,data:PWkt/ZIkXz06GT400er6ep728Cr8wHKXB72IF3S/WA8A6iGrN3qk4gOdB8C/rO06zgGNLGPV+QA9YH4uk46zKlNKj9Go5Kp5wvHoRtO9K0129t1mLfE0/yLaGNAAzx6mpHCMkZkmPFRAutmsmU4LD0MvCrwr8LdgqgXJDFn0TBI=,iv:myHB3VDwzX3G+UKG5KyG0azTn1isTVKlrjZ32nSXRRI=,tag:920OwfVWUw5bjs8YkWfOOg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.8.1
