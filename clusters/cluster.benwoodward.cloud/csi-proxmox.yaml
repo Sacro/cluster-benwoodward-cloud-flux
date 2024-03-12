@@ -13,7 +13,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps/base/csi-proxmox/config
+  path: ./apps/base/csi-proxmox/configs
   decryption:
     provider: sops
     secretRef:
