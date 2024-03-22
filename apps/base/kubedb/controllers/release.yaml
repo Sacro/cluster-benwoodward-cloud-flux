@@ -12,5 +12,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: appscode
+        namespace: kube-system
       version: v2024.3.16
   interval: 1m0s
