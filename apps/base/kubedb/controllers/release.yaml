@@ -15,8 +15,6 @@ spec:
         namespace: kube-system
       version: v2024.3.16
   interval: 1m0s
-  valuesFrom:
-    - kind: Secret
-      name: kubedb-global-license
-      targetPath: global.licenseSecretName
-      valuesKey: key.txt
+  values:
+    global:
+      licenceSecretName: kubedb-global-license
