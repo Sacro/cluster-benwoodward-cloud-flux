@@ -5,4 +5,4 @@ namespace: kubedb
 resources:
   - config.yaml
   - namespace.yaml
-  - repository.yaml
+  - release.yaml
