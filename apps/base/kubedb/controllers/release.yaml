@@ -19,3 +19,4 @@ spec:
     - kind: Secret
       name: kubedb-global-license
       targetPath: global.licenseSecretName
+      valuesKey: key.txt
