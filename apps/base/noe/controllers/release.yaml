@@ -10,5 +10,5 @@ spec:
       version: x.x.x
       sourceRef:
         kind: GitRepository
-        name: neo
+        name: noe
       interval: 60m
