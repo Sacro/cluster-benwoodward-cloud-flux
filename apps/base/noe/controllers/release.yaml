@@ -1,0 +1,14 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: noe
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: noe
+      version: x.x.x
+      sourceRef:
+        kind: GitRepository
+        name: neo
+      interval: 60m
