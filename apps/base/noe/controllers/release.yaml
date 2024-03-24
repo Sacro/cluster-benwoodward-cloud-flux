@@ -12,3 +12,6 @@ spec:
         kind: GitRepository
         name: noe
       interval: 60m
+
+  values:
+    dockerConfigPathCandidates: []
