@@ -15,3 +15,5 @@ spec:
 
   values:
     dockerConfigPathCandidates: []
+    image:
+      tag: 92a3f70dd443e1662648cf77e56fc6d4f789dedf # TODO: check for latest
