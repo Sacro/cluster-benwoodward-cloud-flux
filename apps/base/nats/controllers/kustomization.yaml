@@ -5,4 +5,5 @@ namespace: nats
 resources:
   - namespace.yaml
   - repository.yaml
-  - release.yaml
+  - release-nack.yaml
+  - release-nats.yaml
