@@ -1,0 +1,40 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: nats
+  namespace: kube-system
+spec:
+  chart:
+    spec:
+      chart: nats
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: nats
+      version: 0.8.x
+  interval: 1m0s
+  values:
+    config:
+      jetstream:
+        enabled: true
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: nack
+  namespace: kube-system
+spec:
+  chart:
+    spec:
+      chart: nack
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: nats
+      version: v0.25.x
+  interval: 1m0s
+  values:
+    jetstream:
+      nats:
+        url: nats://nats:4222
