@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Secret
-namespace: csi-proxmox
+namespace: tailscale
 metadata:
-    name: proxmox-csi-plugin
+    name: operator-oauth
 type: Opaque
 stringData:
     client_id: ENC[AES256_GCM,data:I2HXpMs7JXlhz5UVHiZDVSQ=,iv:Axrcv6bFyA+/wRbduj/5ewxpA2ohzEJv33Wcz67NSHg=,tag:9MKZ/mWOc+MyjQiv0nSxJA==,type:str]
