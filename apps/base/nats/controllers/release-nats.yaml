@@ -26,8 +26,8 @@ spec:
             enabled: true
             size: 10Gi
 
-  podTemplate:
-    topologySpreadConstraints:
-      kubernetes.io/hostname:
-        maxSkew: 1
-        whenUnsatisfiable: DoNotSchedule
+    podTemplate:
+      topologySpreadConstraints:
+        kubernetes.io/hostname:
+          maxSkew: 1
+          whenUnsatisfiable: DoNotSchedule
