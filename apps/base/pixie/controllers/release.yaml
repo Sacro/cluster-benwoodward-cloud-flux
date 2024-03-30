@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: pixie-operator
+  namespace: pl
+spec:
+  chart:
+    spec:
+      chart: pixie-operator-chart
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: pixie-operator
+      version: 0.1.x
+  interval: 1m0s
+  values:
+    devCloudNamespace: plc

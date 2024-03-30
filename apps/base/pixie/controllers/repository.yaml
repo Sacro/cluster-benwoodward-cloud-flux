@@ -1,0 +1,7 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: pixie-operator
+spec:
+  interval: 120m0s
+  url: https://artifacts.px.dev/helm_charts/operator
