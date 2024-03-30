@@ -13,5 +13,7 @@ spec:
         name: pixie-operator
       version: 0.1.x
   interval: 1m0s
-  values:
-    devCloudNamespace: plc
+  valuesFrom:
+    - kind: ConfigMap
+      name: pixie-config
+      valuesKey: pixie-config-values.yaml

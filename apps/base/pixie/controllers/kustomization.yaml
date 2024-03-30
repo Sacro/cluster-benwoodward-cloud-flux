@@ -6,3 +6,9 @@ resources:
   - namespace.yaml
   - repository.yaml
   - release.yaml
+configMapGenerator:
+  - name: pixie-config
+  - files:
+    - pixie-config-values.yaml
+configurations:
+  - kustomizeconfig.yaml

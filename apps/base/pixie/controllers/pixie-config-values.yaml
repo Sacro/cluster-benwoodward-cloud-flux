@@ -1,0 +1,23 @@
+pixie-config:
+    deployKey: ENC[AES256_GCM,data:K4yk4ClPbUgQE/R23XnLoNL/qMyx6UR5SapaQzxSlTHS+2hMF/iZP+lvEg==,iv:yGwcpWtmPW+ZQX8QQkbqBTcD1lODkNCV+PjUNPeP98M=,tag:MrJkHitWenKEnpZEbmH2yg==,type:str]
+    devCloudNamespace: ENC[AES256_GCM,data:gX49,iv:ZyGeZe9mHySxwQwFPAxPuBDlANG5Znc8PLaY6eM3QJY=,tag:3+GgP3MM6pfNpDsYGkKwdA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age15lvm85kem62em8d2w0n9ypg6845z7r9hktv2n6jeejg6am0l9ecsa74n5p
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBLUlN4MWZWdWExOUt3cExn
+            TTlydjMxWGppazFGaDFOMCt1dXl3Z1dVNmhJClgxaitYRlNWTjI3YjQ5WVRVM3JD
+            VVFpL3VIdVFTck9IMUVVNDl3QUFHQk0KLS0tIGtuRjB2WXM1a2NjQTNjWWE4OEI2
+            N2p5QlN4Z29lT0Q1cFVxcEdTWlU2eG8KuNkJM9cjTAYMFyD/fCWRiYPvlP34sRAz
+            q+shiJDUyCSG7WdhgKXuFaq66a+xXFQVim1arCkj1/NnjA2sA09wpw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-03-30T22:24:54Z"
+    mac: ENC[AES256_GCM,data:xROvy1PGkoS2adpV4O/QY23jseAMUyxYiGsM2uuyUV1vcZ6cuOsFlZX24f9TfrI/EFN0jmmxqOge4WzW4Nl/C32Adpuw3uF7StO1pMMTIEfdYlrfdZlHoBRMUsTjF8Wc1yeHcrbQd8IflbL6gwokr361lORv4Soh1E0jI3zzdLY=,iv:oCIfoNLHfMpTFjohX7P1fjHmz5+VkIjBg2z4N/G7lAE=,tag:A2M0ezzfIQlqB+R5K7IgXQ==,type:str]
+    pgp: []
+    unencrypted_suffix: _unencrypted
+    version: 3.8.1
