@@ -1,0 +1,17 @@
+---
+apiVersion: kubedb.com/v1alpha2
+kind: Postgres
+metadata:
+  name: postgres
+  namespace: coder
+spec:
+  version: "16.2"
+  storageType: "Durable"
+  storage:
+    storageClassName: "longhorn"
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 10Gi
+  terminationPolicy: Delete
