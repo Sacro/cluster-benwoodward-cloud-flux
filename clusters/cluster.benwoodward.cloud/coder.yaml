@@ -3,7 +3,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: coder
-  namespace: flux-system
+  namespace: coder
 spec:
   interval: 1h
   retryInterval: 2m
