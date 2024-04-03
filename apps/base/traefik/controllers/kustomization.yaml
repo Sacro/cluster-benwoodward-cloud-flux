@@ -4,6 +4,8 @@ kind: Kustomization
 namespace: traefik-v2
 resources:
   - cloudflare-certificate.yaml
+  - cloudflare-issuer.yaml
+  - cloudflare-secret.yaml
   - namespace.yaml
   - release.yaml
   - repository.yaml
