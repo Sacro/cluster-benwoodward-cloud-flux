@@ -14,5 +14,6 @@ spec:
       interval: 60m
   values:
     tlsStore:
-      defaultCertificate:
-        secretName: cloudflare-benwoodward-cloud-tls
+      default:
+        defaultCertificate:
+          secretName: cloudflare-benwoodward-cloud-tls
