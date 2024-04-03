@@ -13,8 +13,12 @@ spec:
         name: coder-v2
       version: 2.x.x
   interval: 1m0s
-  # values:
-  #   coder:
+  values:
+    coder:
   #     env:
   #       - name: CODER_ACCESS_URL
   #         value: "https://coder.benwoodward.cloud"
+      service:
+        enable: true
+        type: ClusterIP # TODO: fix!
+
