@@ -23,6 +23,7 @@ metadata:
 spec:
   dependsOn:
     - name: coder-controllers
+      namespace: flux-system
   interval: 1h
   retryInterval: 2m
   timeout: 10m
