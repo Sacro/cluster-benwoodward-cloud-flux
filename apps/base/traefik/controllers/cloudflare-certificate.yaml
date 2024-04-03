@@ -4,7 +4,7 @@ kind: Certificate
 metadata:
   name: cloudflare-benwoodward-cloud
 spec:
-  secretName: cloudflare-benwoodwrd-cloud-tls
+  secretName: cloudflare-benwoodward-cloud-tls
   dnsNames:
     - "benwoodward.cloud"
     - "*.benwoodward.cloud"
