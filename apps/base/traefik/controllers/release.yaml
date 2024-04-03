@@ -12,3 +12,7 @@ spec:
         kind: HelmRepository
         name: traefik
       interval: 60m
+  values:
+    tlsStore:
+      defaultCertificate:
+        secretName: cloudflare-benwoodward-cloud-tls
