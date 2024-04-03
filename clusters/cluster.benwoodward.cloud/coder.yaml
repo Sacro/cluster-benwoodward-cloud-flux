@@ -45,6 +45,8 @@ metadata:
   name: coder-release
   namespace: coder
 spec:
+  dependsOn:
+    - name: coder-config
   interval: 1h
   retryInterval: 2m
   timeout: 10m
