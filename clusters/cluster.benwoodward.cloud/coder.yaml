@@ -33,6 +33,7 @@ spec:
     name: flux-system
     namespace: flux-system
   path: ./apps/base/coder/config
-  substituteFrom:
-    - kind: Secret
-      name: postgres-auth
+  postBuild:
+    substituteFrom:
+      - kind: Secret
+        name: postgres-auth
