@@ -13,6 +13,8 @@ spec:
         name: traefik
       interval: 60m
   values:
+    service:
+      type: NodePort
     tlsStore:
       default:
         defaultCertificate:
