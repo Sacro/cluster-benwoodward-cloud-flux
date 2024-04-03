@@ -15,10 +15,6 @@ spec:
     name: flux-system
     namespace: flux-system
   path: ./apps/base/coder/controllers
-  decryption:
-    provider: sops
-    secretRef:
-      name: sops-age
   postBuild:
     substituteFrom:
       - kind: Secret
