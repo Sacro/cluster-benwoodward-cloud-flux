@@ -1,0 +1,15 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: cluster-secret
+  namespace: clustersecret
+spec:
+  chart:
+    spec:
+      chart: cluster-secret
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: cluster-secret
+      version: 0.4.x
+  interval: 1m0s
