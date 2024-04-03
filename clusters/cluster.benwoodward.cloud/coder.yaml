@@ -19,3 +19,4 @@ spec:
     substituteFrom:
       - kind: Secret
         name: postgres-auth
+        optional: true
