@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: pixie-deploy-config
+type: Opaque
+stringData:
+    deployKey: ENC[AES256_GCM,data:MEBzCQTibgMcLSrRYsH4PTyybJsgrWZTWVuXL9+mZAJyL3IXMVT4IIV+xA==,iv:NYIN8dqTk6FalPrgfbn8Hw+W/eSJMcsYjYbX3m2xfXc=,tag:LvJaiT2PReiB1vbCPCODJw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age15lvm85kem62em8d2w0n9ypg6845z7r9hktv2n6jeejg6am0l9ecsa74n5p
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBJVTl4WXg0eGpST3FWc09J
+            ZUdPY3hNMTBWejV5dk9nQkxibzBPdHJhMGlFCk5Jelc0ZE9wRk1vSnYzdVpoVzdB
+            RjZ3eDZkYnVMbFVDMXNlanEzYVhHTzAKLS0tIGhlUjNieEVLTERnVEtKZEc1SXF6
+            TjB3cFQ2dlYzUndNVWlzc1Z1WWRMc3MKywxD/1W18Z9EXxRAYuXkwJGwWk4NGUMm
+            2OgArtjiKYMvI/WEZrOh0jS0NEzKaWL+4UHeShZfu9iSoATbKBK8QA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-04-13T15:56:01Z"
+    mac: ENC[AES256_GCM,data:l8B+P77hG2vN/DLEi3tUbMYxAtlVZyBJpad1IuPSEs+zlONLSgLiU6n+pRMDkBnwccY18FIlNYAgXmemNS1Dyt79GdBrCShwzMWCRAa+02bjcolKQP7Gq2nA9pHfF59/0M4d5j7cWfTpN+GemZKrxL6c1L0QaxKCThfDsWQSfeY=,iv:ttGIWnmH6NqAQkSG16kwdwg7xY2MOVSVs+nweUN8Aoo=,tag:pMeocDd3CYE/VDcQEKTWrg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.8.1

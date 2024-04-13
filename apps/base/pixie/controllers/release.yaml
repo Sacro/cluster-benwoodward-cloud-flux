@@ -15,4 +15,4 @@ spec:
   interval: 1m0s
   valuesFrom:
     - kind: Secret
-      name: pixie-deploy-values
+      name: pixie-deploy-config
