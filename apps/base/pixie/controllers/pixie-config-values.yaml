@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-    name: pixie-config
-data:
-    deployKey: px-dep-fcca79c1-4183-4824-ad2c-8eb965ce5972
-    devCloudNamespace: plc
