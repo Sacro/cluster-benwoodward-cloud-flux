@@ -16,3 +16,5 @@ spec:
   valuesFrom:
     - kind: Secret
       name: pixie-deploy-config
+      valuesKey: deployKey
+      targetPath: deployKey
