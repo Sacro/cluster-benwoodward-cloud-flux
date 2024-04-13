@@ -1,27 +1,7 @@
-apiVersion: ENC[AES256_GCM,data:es4=,iv:yy5oj9x20a3hd/zM/meUMtYwyRUYbmvPqWmkGV8VDFk=,tag:fx1y6abjYD4Zhh23gPMoUg==,type:str]
-kind: ENC[AES256_GCM,data:N4S4KK84iUeB,iv:T+D0QS0GPi+vWv+YZldQ30OO581Gxn/zEVbQVff6upw=,tag:eT2XLuDff5o+EUvXyqbwGw==,type:str]
+apiVersion: v1
+kind: ConfigMap
 metadata:
-    name: ENC[AES256_GCM,data:Jd/7b89e+IyTZY+0,iv:rnL7qG6e6D4v3jWeY67bkYz4l2+aabbUvPyrLfP3zjc=,tag:ps+zYE7IzDP/NkpA0rz9aw==,type:str]
+    name: pixie-config
 data:
-    deployKey: ENC[AES256_GCM,data:5BhQNmfSM8+3yzxZwzgjTZuRyr9o/UlCPkA7xfjKc/nuY3MbC5JsF/MklA==,iv:dUUILwv4U2xXTzluPsub+KhynhDBgDXYZD+/H/tCeHg=,tag:XyfIs9Q1V5PiXpUTz3Cbeg==,type:str]
-    devCloudNamespace: ENC[AES256_GCM,data:QB9d,iv:8Fqy2lcNE7yjumMTq5P5IptTsAklIGy5LmtiJzyns8I=,tag:zHiFq+0IjMJ0DnBqscnK+Q==,type:str]
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age:
-        - recipient: age15lvm85kem62em8d2w0n9ypg6845z7r9hktv2n6jeejg6am0l9ecsa74n5p
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBUbnJyaXlXL1QxcWtwUU5r
-            TmNjYStlSE80anlBZTFBcDY1UDYrOVh6RURRCkEyVjdsZko0L0VNenZibGVUclBY
-            LzVSaUI3VmlIUjRRem9nUHB5YTJXVWsKLS0tIDRBYTBFNVBRcHZwNmFORHdtV21B
-            VTNseXo5eWd0UTZqODdXNVNHK2d2c2cKpKExBsWmW/dPIWQj25N+mV7mpCs2zQ44
-            RkvGG4VPkj3axmENiWV3MnL6r9wAC4KKARFzqmo3E3eMdXL8c6m9lA==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2024-03-30T22:31:45Z"
-    mac: ENC[AES256_GCM,data:Gg3reJptwyjrxZj/dELkztrYIT0loVc2Sp74BsGc0SPkOYLAC+grx+qxfF/axBfE9aOHHu3a/3JldUrz67fUK3w5+jnjNqFAF/9paJeN3Tb9zb9VjwwZkoGAPkgdbVoAN5ULWz/zgq8W/SnS6giUCymch6ODZN9g6U83FbUouM8=,iv:QBHKGZvW1PpgTcThdQFZxsm3/Bn9Sfx2EHruHoSV+w4=,tag:/l/wLVGEBdNWOHsZ6mGjvQ==,type:str]
-    pgp: []
-    unencrypted_suffix: _unencrypted
-    version: 3.8.1
+    deployKey: px-dep-fcca79c1-4183-4824-ad2c-8eb965ce5972
+    devCloudNamespace: plc
