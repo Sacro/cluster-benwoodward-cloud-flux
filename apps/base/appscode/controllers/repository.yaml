@@ -5,6 +5,5 @@ metadata:
   name: appscode
   namespace: kube-system
 spec:
-  type: oci
   interval: 1m0s
-  url: oci://ghcr.io/appscode-charts
+  url: https://charts.appscode.com/stable/
