@@ -1,0 +1,16 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: meshery
+  namespace: meshery
+spec:
+  chart:
+    spec:
+      chart: meshery
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: meshery
+      version: 0.7.x
+  interval: 1m0s
