@@ -12,3 +12,31 @@ spec:
         kind: HelmRepository
         name: harbor
       interval: 60m
+      values:
+        core:
+          image:
+            repository: ghcr.io/octohelm/harbor/harbor-core
+        database:
+          internal:
+            image:
+              repository: ghcr.io/octohelm/harbor/harbor-db
+        exporter:
+          image:
+            repository: ghcr.io/octohelm/harbor/harbor-exporter
+        jobservice:
+          image:
+            repository: ghcr.io/octohelm/harbor/harbor-jobservice
+        portal:
+          image:
+            repository: ghcr.io/octohelm/harbor/harbor-portal
+        redis:
+          internal:
+            image:
+              repository: ghcr.io/octohelm/harbor/redis-photon
+        registry:
+          registry:
+            image:
+              repository: ghcr.io/octohelm/harbor/harbor-photon
+        trivy:
+          image:
+            repository: ghcr.io/octohelm/harbor/trivy-adapter-photon
