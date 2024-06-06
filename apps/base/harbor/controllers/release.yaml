@@ -42,7 +42,7 @@ spec:
     registry:
       registry:
         image:
-          repository: ghcr.io/octohelm/harbor/harbor-photon
+          repository: ghcr.io/octohelm/harbor/registry-photon
           tag: v2.10.1
     trivy:
       image:
