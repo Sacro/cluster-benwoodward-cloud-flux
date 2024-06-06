@@ -40,6 +40,10 @@ spec:
           repository: ghcr.io/octohelm/harbor/redis-photon
           tag: v2.10.1
     registry:
+      controller:
+        image:
+          repository: ghcr.io/octohelm/harbor/harbor-registryctl
+          tag: v2.10.1
       registry:
         image:
           repository: ghcr.io/octohelm/harbor/registry-photon
