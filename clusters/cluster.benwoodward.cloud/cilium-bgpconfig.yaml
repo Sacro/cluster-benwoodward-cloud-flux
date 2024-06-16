@@ -6,7 +6,7 @@ metadata:
 spec:
   nodeSelector:
     matchLabels:
-      bgp-policy: a
+      bgp-policy: lb
   virtualRouters:
     - localASN: 64512
       exportPodCIDR: true
@@ -15,4 +15,7 @@ spec:
           peerASN: 65412
       podIPPoolSelector:
         matchExpressions:
-          - {key: somekey, operator: NotIn, values: ['never-used-value']}
+          - { key: somekey, operator: NotIn, values: ["never-used-value"] }
+      serviceSelector:
+        matchExpressions:
+          - { key: somekey, operator: NotIn, values: ["never-used-value"] }
