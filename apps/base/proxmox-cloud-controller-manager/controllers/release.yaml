@@ -12,5 +12,5 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: proxmox-cloud-controller-manager
-      version: 0.2.0
+      version: 0.4.2
   interval: 1m0s
