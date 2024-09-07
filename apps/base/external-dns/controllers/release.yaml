@@ -14,3 +14,12 @@ spec:
         name: external-dns
       version: 8.3.5
   interval: 1m0s
+  values:
+    provider:
+      name: cloudflare
+    env:
+      - name: CF_API_TOKEN
+        valueFrom:
+          secretKeyRef:
+            name: cloudflare-api-key
+            key: apiKey
