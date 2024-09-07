@@ -14,3 +14,7 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./apps/base/external-dns/controllers
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
