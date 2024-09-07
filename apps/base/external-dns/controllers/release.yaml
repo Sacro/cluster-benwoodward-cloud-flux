@@ -16,7 +16,7 @@ spec:
   interval: 1m0s
   values:
     provider:
-      name: cloudflare
+      - name: cloudflare
     env:
       - name: CF_API_TOKEN
         valueFrom:
