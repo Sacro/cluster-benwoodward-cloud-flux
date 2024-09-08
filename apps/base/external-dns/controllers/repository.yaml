@@ -6,5 +6,4 @@ metadata:
   namespace: external-dns
 spec:
   interval: 1m0s
-  url: oci://registry-1.docker.io/bitnamicharts
-  type: oci
+  url: https://kubernetes-sigs.github.io/external-dns/
