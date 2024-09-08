@@ -13,7 +13,7 @@ spec:
         name: coder-v2
       version: 2.x.x
   interval: 1m0s
-  values:
+  values: # https://github.com/coder/coder/tree/main/helm/coder
     coder:
       env:
         - name: CODER_PG_CONNECTION_URL
@@ -21,9 +21,5 @@ spec:
             secretKeyRef:
               name: coder-db-url
               key: url
-        # - name: CODER_ACCESS_URL
-        #   value: "https://coder.benwoodward.cloud"
-      service:
-        enable: true
-        type: ClusterIP # TODO: fix!
-
+        - name: CODER_ACCESS_URL
+          value: "https://coder.benwoodward.cloud"
