@@ -10,6 +10,9 @@ jobs:
   renovate:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
       - name: Renovate Bot GitHub Action
         uses: renovatebot/github-action@v41.0.7
         with:
