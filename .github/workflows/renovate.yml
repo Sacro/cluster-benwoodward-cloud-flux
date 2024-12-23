@@ -3,12 +3,14 @@ on:
   schedule:
     # The "*" (#42, asterisk) character has special semantics in YAML, so this
     # string has to be quoted.
-    - cron: '0/15 * * * *'
+    - cron: "0/15 * * * *"
   workflow_dispatch:
 
 jobs:
   renovate:
     runs-on: ubuntu-latest
     steps:
-    - name: Renovate Bot GitHub Action
-      uses: renovatebot/github-action@v41.0.7
+      - name: Renovate Bot GitHub Action
+        uses: renovatebot/github-action@v41.0.7
+        with:
+          token: ${{ secrets.RENOVATE_TOKEN }}
