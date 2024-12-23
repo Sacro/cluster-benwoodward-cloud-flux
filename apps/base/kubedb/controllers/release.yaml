@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: appscode
         namespace: kube-system
-      version: v2024.4.27
+      version: v2024.12.18
   interval: 1m0s
   values:
     global:
