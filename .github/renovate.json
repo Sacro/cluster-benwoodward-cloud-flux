@@ -6,6 +6,8 @@
   "onboarding": false,
   "platform": "github",
   "forkProcessing": "enabled",
-  "repositories": ["${{ github.repository }}"],
+  "repositories": [
+    "Sacro/cluster-benwoodward-cloud-flux"
+  ],
   "packageRules": []
 }
