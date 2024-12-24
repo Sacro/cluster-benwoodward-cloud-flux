@@ -12,5 +12,5 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: meshery
-      version: 0.7.x
+      version: 0.8.x
   interval: 1m0s
