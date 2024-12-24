@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: nats
-      version: 0.25.x
+      version: 0.27.x
   interval: 1m0s
   # https://github.com/nats-io/k8s/tree/main/helm/charts/nack
   values:
