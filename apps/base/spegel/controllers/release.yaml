@@ -14,3 +14,6 @@ spec:
         name: spegel
       version: v0.0.28
   interval: 1m0s
+  values:
+    spegel:
+      containerdRegistryConfigPath: /etc/cri/conf.d/hosts
