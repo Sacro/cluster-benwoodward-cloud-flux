@@ -19,7 +19,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: coder-config
-  namespace: coder
+  namespace: flux-system
 spec:
   dependsOn:
     - name: coder-controllers
@@ -43,7 +43,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: coder-release
-  namespace: coder
+  namespace: flux-system
 spec:
   dependsOn:
     - name: coder-config
