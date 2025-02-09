@@ -12,5 +12,5 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: csi-proxmox
-      version: 0.3.4
+      version: 0.3.5
   interval: 1m0s
