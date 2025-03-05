@@ -29,7 +29,7 @@ spec:
     jobservice:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-jobservice
-        tag: v2.12.0
+        tag: v2.12.2
     portal:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-portal
