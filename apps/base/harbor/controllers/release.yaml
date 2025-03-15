@@ -16,12 +16,12 @@ spec:
     core:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-core
-        tag: v2.12.0
+        tag: v2.12.2
     database:
       internal:
         image:
           repository: ghcr.io/octohelm/harbor/harbor-db
-          tag: v2.12.0
+          tag: v2.12.2
     exporter:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-exporter
@@ -29,7 +29,7 @@ spec:
     jobservice:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-jobservice
-        tag: v2.12.0
+        tag: v2.12.2
     portal:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-portal
