@@ -4,5 +4,6 @@ kind: Kustomization
 namespace: tailscale
 resources:
   - namespace.yaml
+  - proxygroup.yaml
   - repository.yaml
   - release.yaml
