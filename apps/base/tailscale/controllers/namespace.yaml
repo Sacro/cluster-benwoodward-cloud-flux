@@ -4,4 +4,4 @@ kind: Namespace
 metadata:
   name: tailscale
   labels:
-    pod-security.kubernetes.io/enforce: privilege
+    pod-security.kubernetes.io/enforce: privileged
