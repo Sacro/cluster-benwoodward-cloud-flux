@@ -13,7 +13,15 @@ spec:
         name: harbor
       interval: 60m
   values:
-    expose.type: loadBalancer
+    expose:
+      type: ingress
+
+    ingress:
+      hosts:
+        core: harbor.benwoodward.cloud
+      className: "cilium"
+      labels: {}
+
     core:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-core
