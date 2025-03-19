@@ -13,8 +13,7 @@ spec:
         name: harbor
       interval: 60m
   values:
-    expose:
-      type: loadBalancer
+    expose.type: loadBalancer
     core:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-core
