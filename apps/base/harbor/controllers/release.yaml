@@ -16,11 +16,11 @@ spec:
     expose:
       type: ingress
 
-    ingress:
-      hosts:
-        core: harbor.benwoodward.cloud
-      className: "cilium"
-      labels: {}
+      ingress:
+        hosts:
+          core: harbor.benwoodward.cloud
+        className: "cilium"
+        labels: {}
 
     core:
       image:
