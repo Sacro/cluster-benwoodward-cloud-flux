@@ -8,3 +8,4 @@ resources:
   - release.yaml
   - repository.yaml
   - secret.yaml
+  - wildcard-certificate.yaml
