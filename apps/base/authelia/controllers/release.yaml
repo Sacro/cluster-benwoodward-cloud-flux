@@ -15,3 +15,8 @@ spec:
         name: authelia
         namespace: authelia
       interval: 12h
+  values:
+    storage:
+      postgres:
+        enabled: true
+        address: 'tcp://pg-cluster-app/'
