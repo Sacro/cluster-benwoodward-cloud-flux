@@ -19,8 +19,11 @@ spec:
       ingress:
         hosts:
           core: harbor.benwoodward.cloud
-        className: "cilium"
+        className: cilium
         labels: {}
+
+      tls:
+        certSource: none
 
     core:
       image:
