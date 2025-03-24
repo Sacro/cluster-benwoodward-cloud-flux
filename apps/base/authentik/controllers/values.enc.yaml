@@ -9,25 +9,34 @@ authentik:
         user: file:///postgres-creds/username
     redis:
         enabled: true
-    secret_key: df1d6122db4497759461961806878995292d8c4d213fd6a26b45366026185dad5410ede2522a156767bec25a5883e7f13f8c41252a899243b0e24e1fb6737128
+    secret_key: file:///secrets/secret-key
+global:
+    volumes:
+        - name: secrets
+          secret:
+            secretName: authentik-secrets
+        - name: postgres-creds
+          secret:
+            secretName: pg-cluster-app
+    volumeMounts:
+        - name: postgres-creds
+          mountPath: /postgres-creds
+          readOnly: true
+        - name: secrets
+          mountPath: /secrets
+          readOnly: true
+prometheus:
+    rules:
+        enabled: true
 server:
-    volumes:
-        - name: postgres-creds
-          secret:
-            secretName: pg-cluster-app
-    volumeMounts:
-        - name: postgres-creds
-          mountPath: /postgres-creds
-          readOnly: true
-worker:
-    volumes:
-        - name: postgres-creds
-          secret:
-            secretName: pg-cluster-app
-    volumeMounts:
-        - name: postgres-creds
-          mountPath: /postgres-creds
-          readOnly: true
+    ingress:
+        enabled: true
+        tls:
+            - hosts:
+                - auth.benwoodward.cloud
+    metrics:
+        serviceMonitor:
+            enabled: true
 sops:
     kms: []
     gcp_kms: []
@@ -37,14 +46,14 @@ sops:
         - recipient: age15lvm85kem62em8d2w0n9ypg6845z7r9hktv2n6jeejg6am0l9ecsa74n5p
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA2UWtpd1RLbUYwZmoydnhq
-            OVg2ck5TejBKcFB6QUgrbkFuaWNtRW5aY2p3Cnd3YUlZMEYwRE1MTXhsT0IxeHda
-            QXU3Tk9JcU1WQVNJOEdUM3FaNGo2VUUKLS0tIFRmQytva2w4a3Axc1hpc3h3c1k4
-            MldYcUwrL2NXSXVHZEFQcHB6TW5JakUK0ODkBqGRhTQslHxC5Lt3YmNFjTR6TXzV
-            SjTQHshKSPezZ57vkZ/8ekX4zcv4fkHrtZp8hIpbK5dIkXNerHxoEQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoL2lHUXhnZE1VWFZ1bVJT
+            TzQvdm1LakUyQkp4NzZWRDA3YTNmaXcxK1gwClZHdlk2ZW1RK0dicFlINkxkZVhW
+            bXpGdkxEUVdtYmp0c3lBRzlFU0ErZ1kKLS0tIHp4bmFidmRIZmdkU0lrRk90enor
+            YXZmWkpFaUQwZjVrYlU3V3psQXQ5c1EKIzfHmj1lN9DudRrVIZqnZcrQLglgmmUy
+            PqCsKU1+OvkjgLrEB+xvK0tgYrDtvtjgVRoq19UzGLRNoFJbmGcdBg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-03-24T15:48:30Z"
-    mac: ENC[AES256_GCM,data:TRM/OGewT0OfvRmVIZWHft1XGwu1m/NRXaQ7DIYdWpLwFV9B0jh5dNLINS3p012eAd25dnv/VALnVtlBuizmgd5rR+0xpHKWYTxyLVrJXlYgJoyY0CS37lXfe1NjrovOnpEjL46tRSNHyv+84/3q01u2GAOfHYl5A+cKWaLLX2A=,iv:23LPEqId3yAcR04RrDLEFJEY4MgF2tBYhCGJ3ehQgro=,tag:PVOIFp+HKsJUw8UzZhoWdw==,type:str]
+    lastmodified: "2025-03-24T15:56:50Z"
+    mac: ENC[AES256_GCM,data:dKFrf/E00fd/5TRoh29esP1CBGOX03yMV18vOEXxZ6EEpKuQx2Tb4ub0HGtKaKB4lwoymArzeVdMTcvOkFXGEMVAuwEtFeFMN9R/CrL3KNO6MfIejAkS/kl3sMshiJBZt2Qpt/LNZw7rkvAufzi9X2x4H6iPm6RLBgmNH5b+zts=,iv:uEl3Nzx+A4p9YaCuQtVrllxh/CCZUV1b4E/EI0q7iLU=,tag:Zdy3dLl5MfTvCyEvQNj0lw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.9.4
