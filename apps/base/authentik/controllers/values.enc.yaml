@@ -4,6 +4,7 @@ authentik:
     postgresql:
         host: pg-cluster-rw
         name: app
+    secret_key: df1d6122db4497759461961806878995292d8c4d213fd6a26b45366026185dad5410ede2522a156767bec25a5883e7f13f8c41252a899243b0e24e1fb6737128
 server:
     volumes:
         - name: postgres-creds
@@ -31,14 +32,14 @@ sops:
         - recipient: age15lvm85kem62em8d2w0n9ypg6845z7r9hktv2n6jeejg6am0l9ecsa74n5p
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBWa1VQeTduSTE3dkt2UE1n
-            RXdyRkljRFpsUmlqSVdsR2x1c2VrTnQ2QVJvClh0Mm45ME5UbkdndXFrUWRaekJM
-            eG8yTnFGcGRBSjhEVFdkdDFKMVdLeWsKLS0tIGs2ZHIxdHZENDdxa1FJeWJ6U0pt
-            Ykl0dUhvTVRKZHZvZFhOalpVL1dDV0UKJC71R6YFn36NNdXnDGTLUyLsRUq9wbET
-            TJ7BpggvKvzwSzwvqWxYalX3tmkTGTFUcMd1puUb4CPeHIHksFHUZA==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBQeHVjbWsveGxkNXNGRThX
+            dXFnV1NaL3JWTGU0eDIrWDhwNGVteE1wb3pFClBzTURNLzdKMytMZnRyTjREV1l4
+            OU1CRXZpcHZCZ2s0TVovdWZGUkNPMkEKLS0tIFBSbDNBdGdvZ0wrbEhrSW9yTkww
+            elFXUUFBeFJ6QUY5K2JoL0tKbDFOZm8K/+mXQYHMl4PeY8p20851BbzskW1BJ5ZK
+            UIWbbBsAokCazQMvRvJj16GYVpF1JOMegPlx7OSVgk31kH7SRyZCow==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-03-24T11:26:53Z"
-    mac: ENC[AES256_GCM,data:+8fHa9oN7Pk5SJMSrSMP1BHcsAsYERohuwzPxB/md/Qou+WXZYn6gIpum/Vm1lIpzlrC5GZokHQCNmoabGvOWrkYGE7mM9jHK8YGFDKxqTOG1Gq2K3GKYbPdJcXH0ZjJKzH+xklzBvlHAfNKvI29du43K6ryAF5QbwaIKOtfdOQ=,iv:jmrTCwe50FxgNr5SPSrKmt4bWTlQ8xT9UiCED02jrHQ=,tag:86eB1o5Q7rRLYWa8QuIDSA==,type:str]
+    lastmodified: "2025-03-24T11:38:51Z"
+    mac: ENC[AES256_GCM,data:h3VnjZ7lcveSlAzZmaG6LH+pI1zxEwtc9KgLt9eaH9E6A/rq0he7lRElLM9BxoS8Y9CXbhGyVtzCxWvTUBfnjvuXrAspLIc4V1SADVLLFYJgHHOQrDO/Q1EEgzYk62xdd5Nr3Urp880wGaXssYXTsZesBoVdUMv3/o1TsdXOXvk=,iv:yehxrSZgJy+OP32uE45jo/oKzpf7xFedHxeofitncSY=,tag:yPT39q2gg2NdnSNCe0PGuw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.9.4
