@@ -2,8 +2,11 @@ authentik:
     error_reporting:
         enabled: false
     postgresql:
-        host: pg-cluster-rw
-        name: app
+        host: file:///postgres-creds/host
+        name: file:///postgres-creds/dbname
+        password: file:///postgres-creds/password
+        port: file:///postgres-creds/port
+        user: file:///postgres-creds/username
     secret_key: df1d6122db4497759461961806878995292d8c4d213fd6a26b45366026185dad5410ede2522a156767bec25a5883e7f13f8c41252a899243b0e24e1fb6737128
 server:
     volumes:
@@ -32,14 +35,14 @@ sops:
         - recipient: age15lvm85kem62em8d2w0n9ypg6845z7r9hktv2n6jeejg6am0l9ecsa74n5p
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBQeHVjbWsveGxkNXNGRThX
-            dXFnV1NaL3JWTGU0eDIrWDhwNGVteE1wb3pFClBzTURNLzdKMytMZnRyTjREV1l4
-            OU1CRXZpcHZCZ2s0TVovdWZGUkNPMkEKLS0tIFBSbDNBdGdvZ0wrbEhrSW9yTkww
-            elFXUUFBeFJ6QUY5K2JoL0tKbDFOZm8K/+mXQYHMl4PeY8p20851BbzskW1BJ5ZK
-            UIWbbBsAokCazQMvRvJj16GYVpF1JOMegPlx7OSVgk31kH7SRyZCow==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBlb2RGejZ1L2JJWDM2UEF6
+            Y0hTc3FraVByM2I1UFRiakdjNlFDYlZRSFVZCkFCZ3pDdEFMM1piOGYzNURTUnhz
+            TWNXQWtqZmQrNlBGVHVxSlVJOVJVbWcKLS0tIFZOUHlLNVFkLzVtOTFTYjc5RUpV
+            VE15cStQK09oV0xZNzlqaEpRVGh5dlkKwAENzoNtXoL2F5hmk9r2VDtoKanDXVge
+            cKJhaqi4WSrmTnX0PjUdNxZUQ9wSGnS9Dl1AxcLlWas7WfT1JXqK4Q==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-03-24T11:38:51Z"
-    mac: ENC[AES256_GCM,data:h3VnjZ7lcveSlAzZmaG6LH+pI1zxEwtc9KgLt9eaH9E6A/rq0he7lRElLM9BxoS8Y9CXbhGyVtzCxWvTUBfnjvuXrAspLIc4V1SADVLLFYJgHHOQrDO/Q1EEgzYk62xdd5Nr3Urp880wGaXssYXTsZesBoVdUMv3/o1TsdXOXvk=,iv:yehxrSZgJy+OP32uE45jo/oKzpf7xFedHxeofitncSY=,tag:yPT39q2gg2NdnSNCe0PGuw==,type:str]
+    lastmodified: "2025-03-24T15:42:08Z"
+    mac: ENC[AES256_GCM,data:sIthtNIuwuhH4owzp4QuNZREsdACZAqmKin+Nn7DtZeeiJdo5bhm4/jOKUyDoE/zQjpNEmKICCLV2UYpbI7eEp31Qt87tj8H5OHUdfAAz/aV4mRnXXclGbCKGVtFTuybmR7JaecdsxR0y+ATzOGJzGPcr6MhT6ATHASScD/nsrI=,iv:hFYWGBeX+0oqpsyrjFBUqnkE2TbbLkx3M1+hAAsnDac=,tag:Hgq8mVOvTHz0mRaYOFoJiQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.9.4
