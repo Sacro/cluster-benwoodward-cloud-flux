@@ -1,0 +1,44 @@
+authentik:
+    error_reporting:
+        enabled: false
+    postgresql:
+        host: pg-cluster-rw
+        name: app
+server:
+    volumes:
+        - name: postgres-creds
+          secret:
+            secretName: pg-cluster-app
+    volumeMounts:
+        - name: postgres-creds
+          mountPath: /postgres-creds
+          readOnly: true
+worker:
+    volumes:
+        - name: postgres-creds
+          secret:
+            secretName: pg-cluster-app
+    volumeMounts:
+        - name: postgres-creds
+          mountPath: /postgres-creds
+          readOnly: true
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age15lvm85kem62em8d2w0n9ypg6845z7r9hktv2n6jeejg6am0l9ecsa74n5p
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBWa1VQeTduSTE3dkt2UE1n
+            RXdyRkljRFpsUmlqSVdsR2x1c2VrTnQ2QVJvClh0Mm45ME5UbkdndXFrUWRaekJM
+            eG8yTnFGcGRBSjhEVFdkdDFKMVdLeWsKLS0tIGs2ZHIxdHZENDdxa1FJeWJ6U0pt
+            Ykl0dUhvTVRKZHZvZFhOalpVL1dDV0UKJC71R6YFn36NNdXnDGTLUyLsRUq9wbET
+            TJ7BpggvKvzwSzwvqWxYalX3tmkTGTFUcMd1puUb4CPeHIHksFHUZA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-03-24T11:26:53Z"
+    mac: ENC[AES256_GCM,data:+8fHa9oN7Pk5SJMSrSMP1BHcsAsYERohuwzPxB/md/Qou+WXZYn6gIpum/Vm1lIpzlrC5GZokHQCNmoabGvOWrkYGE7mM9jHK8YGFDKxqTOG1Gq2K3GKYbPdJcXH0ZjJKzH+xklzBvlHAfNKvI29du43K6ryAF5QbwaIKOtfdOQ=,iv:jmrTCwe50FxgNr5SPSrKmt4bWTlQ8xT9UiCED02jrHQ=,tag:86eB1o5Q7rRLYWa8QuIDSA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.9.4

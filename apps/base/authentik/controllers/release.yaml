@@ -14,27 +14,6 @@ spec:
         name: authentik
         namespace: authentik
       interval: 12h
-  values:
-    authentik:
-      error_reporting:
-        enabled: false
-
-    server:
-      volumes:
-        - name: postgres-creds
-          secret:
-            secretName: pg-cluster-app
-      volumeMounts:
-        - name: postgres-creds
-          mountPath: /postgres-creds
-          readOnly: true
-
-    worker:
-      volumes:
-        - name: postgres-creds
-          secret:
-            secretName: pg-cluster-app
-      volumeMounts:
-        - name: postgres-creds
-          mountPath: /postgres-creds
-          readOnly: true
+  valuesFrom:
+    - kind: ConfigMap
+      name: authentik-values

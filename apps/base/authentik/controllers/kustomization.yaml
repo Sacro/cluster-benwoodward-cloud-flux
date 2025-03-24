@@ -8,3 +8,9 @@ resources:
   - release.yaml
   - repository.yaml
   - secret.yaml
+configMapGenerator:
+  - name: authentik-values
+    files:
+      - values.yaml=values.enc.yaml
+configurations:
+  - kustomizeconfig.yaml
