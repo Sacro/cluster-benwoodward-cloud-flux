@@ -18,3 +18,23 @@ spec:
     authentik:
       error_reporting:
         enabled: false
+
+    server:
+      volumes:
+        - name: postgres-creds
+          secret:
+            secretName: pg-cluster-app
+      volumeMounts:
+        - name: postgres-creds
+          mountPath: /postgres-creds
+          readOnly: true
+
+    worker:
+      volumes:
+        - name: postgres-creds
+          secret:
+            secretName: pg-cluster-app
+      volumeMounts:
+        - name: postgres-creds
+          mountPath: /postgres-creds
+          readOnly: true
