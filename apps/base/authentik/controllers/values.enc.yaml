@@ -7,6 +7,8 @@ authentik:
         password: file:///postgres-creds/password
         port: file:///postgres-creds/port
         user: file:///postgres-creds/username
+    redis:
+        enabled: true
     secret_key: df1d6122db4497759461961806878995292d8c4d213fd6a26b45366026185dad5410ede2522a156767bec25a5883e7f13f8c41252a899243b0e24e1fb6737128
 server:
     volumes:
@@ -35,14 +37,14 @@ sops:
         - recipient: age15lvm85kem62em8d2w0n9ypg6845z7r9hktv2n6jeejg6am0l9ecsa74n5p
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBlb2RGejZ1L2JJWDM2UEF6
-            Y0hTc3FraVByM2I1UFRiakdjNlFDYlZRSFVZCkFCZ3pDdEFMM1piOGYzNURTUnhz
-            TWNXQWtqZmQrNlBGVHVxSlVJOVJVbWcKLS0tIFZOUHlLNVFkLzVtOTFTYjc5RUpV
-            VE15cStQK09oV0xZNzlqaEpRVGh5dlkKwAENzoNtXoL2F5hmk9r2VDtoKanDXVge
-            cKJhaqi4WSrmTnX0PjUdNxZUQ9wSGnS9Dl1AxcLlWas7WfT1JXqK4Q==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA2UWtpd1RLbUYwZmoydnhq
+            OVg2ck5TejBKcFB6QUgrbkFuaWNtRW5aY2p3Cnd3YUlZMEYwRE1MTXhsT0IxeHda
+            QXU3Tk9JcU1WQVNJOEdUM3FaNGo2VUUKLS0tIFRmQytva2w4a3Axc1hpc3h3c1k4
+            MldYcUwrL2NXSXVHZEFQcHB6TW5JakUK0ODkBqGRhTQslHxC5Lt3YmNFjTR6TXzV
+            SjTQHshKSPezZ57vkZ/8ekX4zcv4fkHrtZp8hIpbK5dIkXNerHxoEQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-03-24T15:42:08Z"
-    mac: ENC[AES256_GCM,data:sIthtNIuwuhH4owzp4QuNZREsdACZAqmKin+Nn7DtZeeiJdo5bhm4/jOKUyDoE/zQjpNEmKICCLV2UYpbI7eEp31Qt87tj8H5OHUdfAAz/aV4mRnXXclGbCKGVtFTuybmR7JaecdsxR0y+ATzOGJzGPcr6MhT6ATHASScD/nsrI=,iv:hFYWGBeX+0oqpsyrjFBUqnkE2TbbLkx3M1+hAAsnDac=,tag:Hgq8mVOvTHz0mRaYOFoJiQ==,type:str]
+    lastmodified: "2025-03-24T15:48:30Z"
+    mac: ENC[AES256_GCM,data:TRM/OGewT0OfvRmVIZWHft1XGwu1m/NRXaQ7DIYdWpLwFV9B0jh5dNLINS3p012eAd25dnv/VALnVtlBuizmgd5rR+0xpHKWYTxyLVrJXlYgJoyY0CS37lXfe1NjrovOnpEjL46tRSNHyv+84/3q01u2GAOfHYl5A+cKWaLLX2A=,iv:23LPEqId3yAcR04RrDLEFJEY4MgF2tBYhCGJ3ehQgro=,tag:PVOIFp+HKsJUw8UzZhoWdw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.9.4
