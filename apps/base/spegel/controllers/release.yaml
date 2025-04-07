@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: spegel
-      version: 0.1.0
+      version: 0.1.x
   interval: 1m0s
   values:
     spegel:
