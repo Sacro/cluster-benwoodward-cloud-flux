@@ -33,7 +33,7 @@ spec:
       internal:
         image:
           repository: ghcr.io/octohelm/harbor/harbor-db
-          tag: v2.12.2
+          tag: v2.13.0
     exporter:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-exporter
