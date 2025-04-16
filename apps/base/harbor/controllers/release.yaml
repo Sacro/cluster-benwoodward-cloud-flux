@@ -55,7 +55,7 @@ spec:
       controller:
         image:
           repository: ghcr.io/octohelm/harbor/harbor-registryctl
-          tag: v2.12.2
+          tag: v2.13.0
       registry:
         image:
           repository: ghcr.io/octohelm/harbor/registry-photon
