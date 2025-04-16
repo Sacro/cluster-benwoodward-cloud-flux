@@ -63,4 +63,4 @@ spec:
     trivy:
       image:
         repository: ghcr.io/octohelm/harbor/trivy-adapter-photon
-        tag: v2.12.2
+        tag: v2.13.0
