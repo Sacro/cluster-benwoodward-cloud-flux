@@ -15,3 +15,9 @@ spec:
         name: akri-helm-charts
         namespace: akri
       interval: 12h
+  values:
+    udev:
+      configuration:
+        enabled: true
+      discovery:
+        enabled: true
