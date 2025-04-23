@@ -26,6 +26,3 @@ spec:
           - SUBSYSTEMS=="usb", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60"
       discovery:
         enabled: true
-
-    webhookConfiguration:
-      enabled: false
