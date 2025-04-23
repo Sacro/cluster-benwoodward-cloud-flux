@@ -19,11 +19,10 @@ spec:
     udev:
       configuration:
         enabled: true
-        discoveryHandler:
-          discoveryDetails:
-            groupRecursive: true
-            udevRules:
-              - SUBSYSTEMS=="usb", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="2838"
-              - SUBSYSTEMS=="usb", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60"
+        discoveryDetails:
+          groupRecursive: true
+          udevRules:
+          - SUBSYSTEMS=="usb", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="2838"
+          - SUBSYSTEMS=="usb", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60"
       discovery:
         enabled: true
