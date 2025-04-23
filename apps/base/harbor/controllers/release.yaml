@@ -28,7 +28,7 @@ spec:
     core:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-core
-        tag: v2.12.2
+        tag: v2.13.0
     database:
       internal:
         image:
