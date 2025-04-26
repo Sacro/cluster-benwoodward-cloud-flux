@@ -11,6 +11,6 @@ resources:
 configMapGenerator:
   - name: authentik-config
     files:
-      - values.yaml
+      - config.yaml
 configurations:
   - kustomizeconfig.yaml
