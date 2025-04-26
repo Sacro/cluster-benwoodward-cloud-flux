@@ -1,0 +1,46 @@
+authentik:
+    error_reporting:
+        enabled: false
+    postgresql:
+        host: file:///postgres-creds/host
+        name: file:///postgres-creds/dbname
+        password: file:///postgres-creds/password
+        port: file:///postgres-creds/port
+        user: file:///postgres-creds/username
+    redis:
+        host: file:///redis-creds/host
+        password: file:///redis-creds/password
+    secret_key: file:///secrets/secret-key
+global:
+    volumes:
+        - name: authentik-secrets
+          secret:
+            secretName: authentik-secrets
+        - name: postgres-creds
+          secret:
+            secretName: pg-cluster-app
+        - name: redis-creds
+          secret:
+            secretName: redis-secrets
+    volumeMounts:
+        - name: postgres-creds
+          mountPath: /postgres-creds
+          readOnly: true
+        - name: authentik-secrets
+          mountPath: /secrets
+          readOnly: true
+        - name: redis-creds
+          mountPath: /redis-creds
+          readOnly: true
+prometheus:
+    rules:
+        enabled: true
+server:
+    ingress:
+        enabled: true
+        tls:
+            - hosts:
+                - auth.benwoodward.cloud
+    metrics:
+        serviceMonitor:
+            enabled: true
