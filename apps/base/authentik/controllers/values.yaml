@@ -36,6 +36,9 @@ prometheus:
     rules:
         enabled: true
 server:
+    env:
+        - name: TMPDIR
+          value: /tmp
     ingress:
         enabled: true
         tls:
@@ -44,3 +47,8 @@ server:
     metrics:
         serviceMonitor:
             enabled: true
+
+worker:
+    env:
+        - name: TMPDIR
+          value: /tmp
