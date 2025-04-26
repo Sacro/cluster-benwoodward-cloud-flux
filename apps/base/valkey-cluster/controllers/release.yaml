@@ -1,0 +1,21 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: valkey-cluster
+  namespace: valkey
+spec:
+  chart:
+    spec:
+      chart: valkey-cluster
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami-charts
+      version: 0.1.x
+  interval: 1m0s
+  values:
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true
