@@ -16,4 +16,4 @@ spec:
       interval: 12h
   valuesFrom:
     - kind: ConfigMap
-      name: authentik-config
+      name: authentik-values
