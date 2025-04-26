@@ -15,13 +15,13 @@ global:
     volumes:
         - name: authentik-secrets
           secret:
-            secretName: authentik-secrets
+            secretName: authentik
         - name: postgres-creds
           secret:
             secretName: pg-cluster-app
         - name: redis-creds
           secret:
-            secretName: redis-secrets
+            secretName: redis
     volumeMounts:
         - name: postgres-creds
           mountPath: /postgres-creds
