@@ -11,13 +11,17 @@ geoip:
 
 global:
     volumes:
+        - name: authentik-postgresql
+          secret:
+            secretName: authentik-postgresql
         - name: authentik-secrets
           secret:
             secretName: authentik
-        - name: postgresql-creds
-          secret:
-            secretName: authentik-postgresql
+
     volumeMounts:
+        - name: authentik-postgresql
+          mountpath: /postgres-creds
+          readOnly: true
         - name: authentik-secrets
           mountPath: /secrets
           readOnly: true
