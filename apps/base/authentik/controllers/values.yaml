@@ -1,6 +1,8 @@
 authentik:
     error_reporting:
         enabled: false
+    postgresql:
+        password: file:///postgres-creds/password
     secret_key: file:///secrets/secret-key
 
 # TODO: enable
@@ -12,6 +14,9 @@ global:
         - name: authentik-secrets
           secret:
             secretName: authentik
+        - name: postgresql-creds
+          secret:
+            secretName: authentik-postgresql
     volumeMounts:
         - name: authentik-secrets
           mountPath: /secrets
