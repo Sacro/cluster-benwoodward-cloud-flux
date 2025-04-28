@@ -7,10 +7,8 @@ authentik:
         password: file:///postgres-creds/password
         port: file:///postgres-creds/port
         user: file:///postgres-creds/username
-    redis:
-        host: file:///redis-creds/host
-        password: file:///redis-creds/password
     secret_key: file:///secrets/secret-key
+
 global:
     volumes:
         - name: authentik-secrets
@@ -29,12 +27,14 @@ global:
         - name: authentik-secrets
           mountPath: /secrets
           readOnly: true
-        - name: redis-creds
-          mountPath: /redis-creds
-          readOnly: true
+
 prometheus:
     rules:
         enabled: true
+
+redis:
+  enabled: true
+
 server:
     env:
         - name: TMPDIR
