@@ -20,7 +20,7 @@ global:
 
     volumeMounts:
         - name: authentik-postgresql
-          mountpath: /postgres-creds
+          mountPath: /postgres-creds
           readOnly: true
         - name: authentik-secrets
           mountPath: /secrets
