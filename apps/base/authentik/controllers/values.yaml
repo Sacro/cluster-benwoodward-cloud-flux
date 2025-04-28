@@ -1,12 +1,6 @@
 authentik:
     error_reporting:
         enabled: false
-    postgresql:
-        host: file:///postgres-creds/host
-        name: file:///postgres-creds/dbname
-        password: file:///postgres-creds/password
-        port: file:///postgres-creds/port
-        user: file:///postgres-creds/username
     secret_key: file:///secrets/secret-key
 
 # TODO: enable
