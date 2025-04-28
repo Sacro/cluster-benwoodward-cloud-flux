@@ -44,7 +44,6 @@ server:
         enabled: true
         hosts:
           - auth.benwoodward.cloud
-        https: true
 
     metrics:
         serviceMonitor:
