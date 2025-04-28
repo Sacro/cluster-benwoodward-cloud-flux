@@ -18,16 +18,7 @@ global:
         - name: authentik-secrets
           secret:
             secretName: authentik
-        - name: postgres-creds
-          secret:
-            secretName: pg-cluster-app
-        - name: redis-creds
-          secret:
-            secretName: redis
     volumeMounts:
-        - name: postgres-creds
-          mountPath: /postgres-creds
-          readOnly: true
         - name: authentik-secrets
           mountPath: /secrets
           readOnly: true
