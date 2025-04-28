@@ -42,9 +42,10 @@ server:
           value: /tmp
     ingress:
         enabled: true
-        tls:
-            - hosts:
-                - auth.benwoodward.cloud
+        hosts:
+          - auth.benwoodward.cloud
+        https: true
+
     metrics:
         serviceMonitor:
             enabled: true
