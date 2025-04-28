@@ -9,6 +9,10 @@ authentik:
         user: file:///postgres-creds/username
     secret_key: file:///secrets/secret-key
 
+# TODO: enable
+geoip:
+  enabled: false
+
 global:
     volumes:
         - name: authentik-secrets
@@ -27,6 +31,9 @@ global:
         - name: authentik-secrets
           mountPath: /secrets
           readOnly: true
+
+postgresql:
+  enabled: true
 
 prometheus:
     rules:
