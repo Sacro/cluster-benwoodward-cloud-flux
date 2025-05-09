@@ -15,5 +15,4 @@ spec:
       version: 7.x.x
   interval: 1m0s
   values:
-    global:
-      zabbixImageTag: ubuntu-7.2.6
+    zabbixImageTag: ubuntu-7.2.6
