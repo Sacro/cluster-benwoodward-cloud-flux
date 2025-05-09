@@ -1,0 +1,17 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: zabbix
+  namespace: zabbix
+spec:
+  chart:
+    spec:
+      chart: zabbix
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: zabbix-community
+      version: 7.x.x
+  interval: 1m0s
+  values: {}

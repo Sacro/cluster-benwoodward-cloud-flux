@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: zabbix-community
+  namespace: zabbix
+spec:
+  type: oci
+  interval: 1m0s
+  url: https://zabbix-community.github.io/helm-zabbix
