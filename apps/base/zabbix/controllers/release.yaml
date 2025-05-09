@@ -14,4 +14,6 @@ spec:
         name: zabbix-community
       version: 7.x.x
   interval: 1m0s
-  values: {}
+  values:
+    global:
+      zabbixImageTag: ubuntu-7.2.6
