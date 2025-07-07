@@ -15,6 +15,4 @@ spec:
         name: cloudflare
         namespace: cloudflare
       interval: 12h
-  values:
-    cloudflare:
-      tunnelId: eb1c8cef-12ae-41fd-9c10-e54e1adb7685
+  values: {}
