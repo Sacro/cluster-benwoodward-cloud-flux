@@ -16,10 +16,5 @@ spec:
         namespace: cloudflare
       interval: 12h
   values:
-    # TODO: MOVE INTO OUR OWN SERVICES
-    elasticsearch:
-      enabled: true
-    grafana:
-      enabled: true
-    prometheus:
-      enabled: true
+    cloudflared:
+      tunnelId: eb1c8cef-12ae-41fd-9c10-e54e1adb7685
