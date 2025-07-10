@@ -9,5 +9,9 @@ spec:
     - "benwoodward.cloud"
     - "*.benwoodward.cloud"
   issuerRef:
+    group: cert-manager.io
     name: cloudflare-issuer
     kind: Issuer
+  usages:
+    - digital signature
+    - key encipherment

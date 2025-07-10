@@ -16,10 +16,10 @@ spec:
   rules:
     - matches:
         - path:
-          type: PathPrefix
-          value: /
+            type: PathPrefix
+            value: /
       backendRefs:
-        - name: harbor
+        - name: harbor-core
           port: 80
           kind: Service
 
