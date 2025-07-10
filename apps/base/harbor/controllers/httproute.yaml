@@ -16,16 +16,16 @@ spec:
     - matches:
         - path:
             type: PathPrefix
-            value: /api/*
+            value: /api/
         - path:
             type: PathPrefix
-            value: /service/*
+            value: /service/
         - path:
             type: PathPrefix
-            value: /v2/*
+            value: /v2/
         - path:
             type: PathPrefix
-            value: /c/*
+            value: /c/
       backendRefs:
         - name: harbor-core
           port: 80
