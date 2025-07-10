@@ -15,7 +15,8 @@ spec:
       tls:
         certificateRefs:
           - kind: Secret
-            name: cloudflare-benwoodward-cloud-tls
+            name: benwoodward-cloud-tls
+            namespace: gateway
       allowedRoutes:
         namespaces:
           from: All
