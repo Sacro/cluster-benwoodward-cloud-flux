@@ -14,16 +14,12 @@ spec:
       interval: 60m
   values:
     expose:
-      type: ingress
-
-      ingress:
-        hosts:
-          core: harbor.benwoodward.cloud
-        className: cilium
-        labels: {}
+      type: ClusterIP
 
       tls:
-        certSource: none
+        enabled: false
+
+    externalURL: harbor.benwoodward.cloud
 
     core:
       image:
