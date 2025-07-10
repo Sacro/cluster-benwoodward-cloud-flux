@@ -19,7 +19,7 @@ spec:
       tls:
         enabled: false
 
-    externalURL: harbor.benwoodward.cloud
+    externalURL: https://harbor.benwoodward.cloud
 
     core:
       image:
