@@ -38,6 +38,10 @@ spec:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-jobservice
         tag: v2.13.0
+    nginx:
+      image:
+        repository: ghcr.io/octohelm/harbor/nginx-photon
+        tag: v2.13.0
     portal:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-portal
