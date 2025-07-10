@@ -27,7 +27,7 @@ spec:
             type: PathPrefix
             value: /c
       backendRefs:
-        - name: harbor-portal
+        - name: harbor-core
           port: 80
     - matches:
         - path:
