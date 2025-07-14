@@ -15,12 +15,19 @@ spec:
       version: 1.x.x
   interval: 1m0s
   values:
-    gatewayNamespace: gateway
-    provider:
-      name: cloudflare
     env:
       - name: CF_API_TOKEN
         valueFrom:
           secretKeyRef:
             name: cloudflare-api-key
             key: apiKey
+    gatewayName: cilium-gateway
+    gatewayNamespace: gateway
+    provider:
+      name: cloudflare
+    sources:
+      - gateway-httproute
+      - gateway-grpcroute
+      - gateway-tlsroute
+      - gateway-tcproute
+      - gateway-udproute
