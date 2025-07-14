@@ -21,8 +21,6 @@ spec:
           secretKeyRef:
             name: cloudflare-api-key
             key: apiKey
-    gatewayName: cilium-gateway
-    gatewayNamespace: gateway
     policy: sync
     provider:
       name: cloudflare
