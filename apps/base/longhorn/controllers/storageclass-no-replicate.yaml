@@ -7,5 +7,5 @@ parameters:
   dataLocality: strict-local
   disableRevisionCounter: "true"
   fsType: ext4
-  numberOfReplicas: "0"
+  numberOfReplicas: "1"
 provisioner: driver.longhorn.io
