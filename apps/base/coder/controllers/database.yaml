@@ -1,17 +1,12 @@
 ---
-apiVersion: kubedb.com/v1alpha2
-kind: Postgres
+apiVersion: postgresl.cnpg.io/v1
+kind: Cluster
 metadata:
-  name: postgres
-  namespace: coder
+  name: cluster
 spec:
-  version: "16.1"
-  storageType: "Durable"
+  instances: 3
+  description: "Coder DB"
+  primaryUpdateStrategy: unsupervised
   storage:
-    storageClassName: "longhorn"
-    accessModes:
-    - ReadWriteOnce
-    resources:
-      requests:
-        storage: 10Gi
-  terminationPolicy: Delete
+    storageClass: longhorn-no-replicate
+    size: 10Gi
