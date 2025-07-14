@@ -23,3 +23,6 @@ spec:
               key: uri
         - name: CODER_ACCESS_URL
           value: "https://coder.benwoodward.cloud"
+      service:
+        enable: true
+        type: ClusterIP
