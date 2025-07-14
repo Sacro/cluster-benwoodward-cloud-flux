@@ -5,4 +5,5 @@ namespace: coder
 resources:
   - database.yaml
   - namespace.yaml
+  - release.yaml
   - repository.yaml
