@@ -26,3 +26,11 @@ spec:
       service:
         enable: true
         type: ClusterIP
+      volumes:
+        - name: "kubeconfig-mount"
+          secret:
+            secretName: "kubeconfig-secret"
+      volumeMounts:
+        - name: "kubeconfig-mount"
+          mountPath: "/mnt/secrets/kube"
+          readOnly: true
