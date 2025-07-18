@@ -2,6 +2,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: longhorn-no-replicate
+allowVolumeExpansion: true
 parameters:
   dataEngine: v1
   dataLocality: strict-local
