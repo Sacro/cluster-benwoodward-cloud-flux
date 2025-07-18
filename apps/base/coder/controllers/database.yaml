@@ -9,4 +9,4 @@ spec:
   primaryUpdateStrategy: unsupervised
   storage:
     storageClass: longhorn-no-replicate
-    size: 10Gi
+    size: 25Gi
