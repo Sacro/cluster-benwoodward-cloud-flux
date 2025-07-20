@@ -1,0 +1,68 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dev-drive
+  namespace: dev
+  labels:
+    app: dev-drive
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: longhorn
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-drive
+  namespace: dev
+  labels:
+    app: dev-drive
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dev-drive
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: dev-drive
+    spec:
+      containers:
+        - image: ubuntu:xenial
+          imagePullPolicy: IfNotPresent
+          name: dev-drive
+          stdin: true
+          tty: true
+          volumeMounts:
+            - mountPath: /data
+              name: dev-drive
+      restartPolicy: Always
+      volumes:
+        - name: dev-drive
+          persistentVolumeClaim:
+            claimName: dev-drive
+# ---
+# apiVersion: gateway.networking.k8s.io/v1alpha2
+# kind: UDPRoute
+# metadata:
+#   namespace: longhorn-system
+# spec:
+#   parentRefs:
+#     - name: cilium-gateway
+#       namespace: gateway
+#   rules:
+#     - backendRefs:
+#         - name: share-manager-pvc-944a8d89-04ea-4fe0-b8b3-669e338a4917
+#           port: 2049
