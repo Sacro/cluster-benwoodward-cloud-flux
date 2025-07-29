@@ -18,3 +18,5 @@ spec:
       name: pixie-deploy-config
       valuesKey: deployKey
       targetPath: deployKey
+  values:
+    pemMemoryLimit: 1Gi
