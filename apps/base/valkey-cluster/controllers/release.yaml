@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami-charts
-      version: 0.1.x
+      version: 3.x.x
   interval: 1m0s
   values:
     metrics:
