@@ -19,3 +19,5 @@ spec:
       enabled: true
       serviceMonitor:
         enabled: true
+    persistence:
+      storageClass: longhorn-no-replicate
