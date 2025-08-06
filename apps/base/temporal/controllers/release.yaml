@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: temporal
-      version: "0.64.x"
+      version: "0.65.x"
       sourceRef:
         kind: HelmRepository
         name: temporal
