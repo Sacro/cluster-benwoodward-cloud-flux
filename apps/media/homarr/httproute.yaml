@@ -16,4 +16,4 @@ spec:
             value: /
       backendRefs:
         - name: homarr
-          port: 10245
+          port: 7575
