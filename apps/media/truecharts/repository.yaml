@@ -2,8 +2,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: k8s-at-home
-  namespace: kube-system
+  name: truecharts
+  namespace: truecharts
 spec:
   interval: 1m0s
-  url: https://k8s-at-home.com/charts/
+  url: oci://ghcr.io/spinkube/charts
+  type: oci
