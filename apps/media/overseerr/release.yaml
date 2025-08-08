@@ -21,4 +21,5 @@ spec:
       config:
         size: 1Gi
     podOptions:
-      nodeSelector: {}
+      nodeSelector:
+        kubernetes.io/arch: arm64

@@ -24,3 +24,6 @@ spec:
         size: 10Gi
       media:
         size: 10Gi
+    podOptions:
+      nodeSelector:
+        kubernetes.io/arch: arm64

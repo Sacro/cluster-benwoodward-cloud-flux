@@ -24,3 +24,6 @@ spec:
         size: 1Gi
       icons:
         size: 1Gi
+    podOptions:
+      nodeSelector:
+        kubernetes.io/arch: arm64
