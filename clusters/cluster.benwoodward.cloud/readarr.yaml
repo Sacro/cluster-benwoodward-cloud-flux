@@ -17,3 +17,4 @@ spec:
   path: ./apps/media/readarr
   dependsOn:
     - name: media-namespace
+      namespace: flux-system
