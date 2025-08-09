@@ -20,6 +20,3 @@ spec:
     persistence:
       config:
         size: 1Gi
-    podOptions:
-      nodeSelector:
-        kubernetes.io/arch: arm64
