@@ -22,6 +22,7 @@ spec:
         size: 1Gi
       data:
         enabled: true
+        mountPath: /nfs
         storageClass: nfs-client
     podOptions:
       nodeSelector:
