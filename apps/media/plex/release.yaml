@@ -20,6 +20,12 @@ spec:
     persistence:
       config:
         size: 1Gi
+      data:
+        enabled: true
+        type: nfs
+        server: 192.168.5.250
+        path: /volume1/NFS
+        mountPath: /nfs
     plex:
       additionalAdvertiseURL: "plex.benwoodward.cloud"
     podOptions:
