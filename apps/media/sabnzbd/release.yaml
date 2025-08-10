@@ -22,8 +22,10 @@ spec:
         size: 1Gi
       data:
         enabled: true
+        type: nfs
+        server: 192.168.5.250
+        path: /volume1/NFS
         mountPath: /nfs
-        storageClass: nfs-client
     podOptions:
       nodeSelector:
         kubernetes.io/arch: arm64
