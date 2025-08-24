@@ -17,6 +17,7 @@ spec:
   # https://github.com/coredns/helm/blob/master/charts/coredns/values.yaml
   values:
     isClusterService: true
+    k8sAppLabelOverride: "kube-dns"
     serviceType: ClusterIP
     service:
       clusterIP: 10.96.0.10
