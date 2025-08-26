@@ -1,0 +1,38 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: stash
+  namespace: media
+spec:
+  chart:
+    spec:
+      chart: stash
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: stash
+      version: 13.x.x
+  interval: 1m0s
+  # https://github.com/trueforge-org/truecharts/blob/master/charts/stable/stash/values.yaml
+  # https://github.com/trueforge-org/truecharts/blob/master/charts/library/common/values.yaml
+  values:
+    persistence:
+      blobs:
+        size: 10Gi
+      config:
+        size: 1Gi
+      data:
+        enabled: true
+        type: nfs
+        server: 192.168.5.250
+        path: /volume1/NFS
+        mountPath: /nfs
+      generated:
+        size: 10Gi
+      metadata:
+        size: 10Gi
+
+    podOptions:
+      nodeSelector:
+        kubernetes.io/arch: arm64
