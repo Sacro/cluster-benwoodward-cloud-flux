@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: stash
-      version: 13.x.x
+      version: 18.x.x
   interval: 1m0s
   # https://github.com/trueforge-org/truecharts/blob/master/charts/stable/stash/values.yaml
   # https://github.com/trueforge-org/truecharts/blob/master/charts/library/common/values.yaml
