@@ -20,6 +20,8 @@ spec:
     persistence:
       blobs:
         size: 10Gi
+      cache:
+        size: 10Gi
       config:
         size: 1Gi
       data:
