@@ -21,4 +21,5 @@ spec:
       config:
         size: 1Gi
     podSpec:
-      affinity: {}
+      affinity:
+        podAffinity: {}
