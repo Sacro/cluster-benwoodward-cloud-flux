@@ -27,8 +27,7 @@ spec:
         path: /volume1/NFS
         mountPath: /nfs
     podOptions:
-      nodeSelector:
-        kubernetes.io/arch: arm64
-    podSpec:
       affinity:
         podAffinity: false
+      nodeSelector:
+        kubernetes.io/arch: arm64

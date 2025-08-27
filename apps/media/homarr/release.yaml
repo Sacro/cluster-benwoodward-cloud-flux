@@ -29,8 +29,7 @@ spec:
       icons:
         size: 1Gi
     podOptions:
-      nodeSelector:
-        kubernetes.io/arch: arm64
-    podSpec:
       affinity:
         podAffinity: false
+      nodeSelector:
+        kubernetes.io/arch: arm64
