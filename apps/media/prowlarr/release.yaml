@@ -25,4 +25,4 @@ spec:
         kubernetes.io/arch: arm64
     podSpec:
       affinity:
-        podAffinity: {}
+        podAffinity: false

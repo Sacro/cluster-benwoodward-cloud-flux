@@ -28,4 +28,4 @@ spec:
         mountPath: /nfs
     podSpec:
       affinity:
-        podAffinity: {}
+        podAffinity: false

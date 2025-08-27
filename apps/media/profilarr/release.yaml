@@ -22,4 +22,4 @@ spec:
         size: 1Gi
     podSpec:
       affinity:
-        podAffinity: {}
+        podAffinity: false
