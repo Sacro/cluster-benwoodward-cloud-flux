@@ -24,14 +24,11 @@ spec:
         size: 10Gi
       config:
         size: 1Gi
-      data:
+      library:
         enabled: true
         type: nfs
         server: 192.168.5.250
-        path: /volume1/NFS
-        mountPath: /nfs
-      library:
-        size: 10Gi
+        path: /volume1/NFS/data/roms
       resources:
         size: 10Gi
     podOptions:
