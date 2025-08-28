@@ -41,3 +41,30 @@ spec:
       #   kubernetes.io/arch: arm64
     redis:
       enabled: true # TODO: switch to redis operator
+    workload:
+      main:
+        podSpec:
+          containers:
+            main:
+              env:
+                DB_HOST:
+                  secretKeyRef:
+                    name: romm-cluster-app
+                    key: host
+                DB_PORT:
+                  secretKeyRef:
+                    name: romm-cluster-app
+                    key: port
+                DB_NAME:
+                  secretKeyRef:
+                    name: romm-cluster-app
+                    key: dbname
+                DB_USER:
+                  secretKeyRef:
+                    name: romm-cluster-app
+                    key: user
+                DB_PASSWD:
+                  secretKeyRef:
+                    name: romm-cluster-app
+                    key: password
+                ROMM_DB_DRIVER: postgresql
