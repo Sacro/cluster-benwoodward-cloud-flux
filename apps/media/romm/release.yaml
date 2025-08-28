@@ -70,4 +70,8 @@ spec:
                     name: romm-cluster-app
                     key: password
                 ROMM_DB_DRIVER: postgresql
-
+                STEAMGRIDDB_API_KEY:
+                  secretKeyRef:
+                    expandObjectName: false
+                    name: romm-api-tokens-secret
+                    key: steamgriddb-api-key
