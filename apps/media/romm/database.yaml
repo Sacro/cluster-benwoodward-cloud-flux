@@ -1,0 +1,13 @@
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: romm-cluster
+  namespace: media
+spec:
+  instances: 3
+  description: "Romm DB"
+  primaryUpdateStrategy: unsupervised
+  storage:
+    storageClass: longhorn-no-replicate
+    size: 10Gi

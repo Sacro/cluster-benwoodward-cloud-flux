@@ -1,0 +1,43 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: romm
+  namespace: media
+spec:
+  chart:
+    spec:
+      chart: romm
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: romm
+      version: 13.x.x
+  interval: 1m0s
+  # https://github.com/trueforge-org/truecharts/blob/master/charts/stable/romm/values.yaml
+  # https://github.com/trueforge-org/truecharts/blob/master/charts/library/common/values.yaml
+  values:
+    mariadb:
+      enabled: false
+    persistence:
+      assets:
+        size: 10Gi
+      config:
+        size: 1Gi
+      data:
+        enabled: true
+        type: nfs
+        server: 192.168.5.250
+        path: /volume1/NFS
+        mountPath: /nfs
+      library:
+        size: 10Gi
+      resources:
+        size: 10Gi
+    podOptions:
+      affinity:
+        podAffinity: false
+      nodeSelector:
+        kubernetes.io/arch: arm64
+    redis:
+      enabled: true # TODO: switch to redis operator
