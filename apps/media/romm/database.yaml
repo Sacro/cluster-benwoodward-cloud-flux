@@ -7,6 +7,14 @@ metadata:
 spec:
   instances: 3
   description: "Romm DB"
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/arch
+          operator: In
+          values:
+          - arm64
   primaryUpdateStrategy: unsupervised
   storage:
     storageClass: longhorn-no-replicate
