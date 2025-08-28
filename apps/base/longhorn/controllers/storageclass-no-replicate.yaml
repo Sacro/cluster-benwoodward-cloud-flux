@@ -5,7 +5,7 @@ metadata:
 allowVolumeExpansion: true
 parameters:
   dataEngine: v1
-  dataLocality: strict-local
+  dataLocality: best-effort # means that it can move pods if needed
   disableRevisionCounter: "true"
   fsType: ext4
   numberOfReplicas: "1"
