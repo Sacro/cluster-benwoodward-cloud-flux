@@ -44,6 +44,7 @@ spec:
           containers:
             main:
               env:
+                # https://docs.romm.app/latest/Getting-Started/Environment-Variables
                 DB_HOST:
                   secretKeyRef:
                     expandObjectName: false
@@ -69,7 +70,24 @@ spec:
                     expandObjectName: false
                     name: romm-cluster-app
                     key: password
+
+                LAUNCHBOX_API_ENABLED: true
+                ENABLE_SCHEDULED_UPDATE_LAUNCHBOX_METADATA: true
+
                 ROMM_DB_DRIVER: postgresql
+
+                SCREENSCRAPER_USER:
+                  secretKeyRef:
+                    expandObjectName: false
+                    name: romm-api-tokens-secret
+                    key: screenscraper-user
+
+                SCREENSCRAPER_PASSWORD:
+                  secretKeyRef:
+                    expandObjectName: false
+                    name: romm-api-tokens-secret
+                    key: screenscraper-password
+
                 STEAMGRIDDB_API_KEY:
                   secretKeyRef:
                     expandObjectName: false
