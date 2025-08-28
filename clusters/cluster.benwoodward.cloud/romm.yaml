@@ -15,6 +15,10 @@ spec:
     name: flux-system
     namespace: flux-system
   path: ./apps/media/romm
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+      namespace: flux-system
   dependsOn:
     - name: media-namespace
-      namespace: flux-system
