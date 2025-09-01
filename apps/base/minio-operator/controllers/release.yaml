@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: minio
-      version: 4.x.x
+      version: 7.x.x
   interval: 1m0s
   # https://github.com/minio/operator/blob/master/helm/operator/values.yaml
   values: {}
