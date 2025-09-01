@@ -11,7 +11,7 @@ spec:
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: minio-operator
+        name: minio
       version: 4.x.x
   interval: 1m0s
   # https://github.com/minio/operator/blob/master/helm/operator/values.yaml
