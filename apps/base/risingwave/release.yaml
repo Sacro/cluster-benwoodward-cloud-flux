@@ -1,0 +1,21 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: risingwave
+  namespace: risingwave
+spec:
+  chart:
+    spec:
+      chart: risingwave
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: risingwavelabs
+      version: 0.2.x
+  interval: 1m0s
+  # https://github.com/risingwavelabs/helm-charts/blob/main/docs/CONFIGURATION.md#customize-meta-store
+  values:
+    metaStore:
+      postgresql:
+        enabled: true
