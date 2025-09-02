@@ -1,0 +1,20 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: calibre
+  namespace: media
+spec:
+  interval: 1h
+  retryInterval: 2m
+  timeout: 10m
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
+  path: ./apps/media/calibre
+  dependsOn:
+    - name: media-namespace
+      namespace: flux-system
