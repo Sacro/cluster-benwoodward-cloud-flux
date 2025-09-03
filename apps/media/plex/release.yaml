@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: plex
-      version: 20.2.x
+      version: 20.x.x
   interval: 1m0s
   # https://github.com/trueforge-org/truecharts/blob/master/charts/stable/plex/values.yaml
   # https://github.com/trueforge-org/truecharts/blob/master/charts/library/common/values.yaml
