@@ -6,5 +6,5 @@ metadata:
   namespace: media
 spec:
   interval: 1m0s
-  url: oci://tccr.io/truecharts
+  url: oci://oci.trueforge.org/truecharts
   type: oci
