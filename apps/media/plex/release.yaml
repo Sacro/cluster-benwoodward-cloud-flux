@@ -27,7 +27,7 @@ spec:
         path: /volume1/NFS
         mountPath: /nfs
     plex:
-      additionalAdvertiseURL: "plex.benwoodward.cloud"
+      additionalAdvertiseURL: "https://plex.benwoodward.cloud:443"
     podOptions:
       affinity:
         podAffinity: false
