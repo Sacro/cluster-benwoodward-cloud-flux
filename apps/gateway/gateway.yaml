@@ -5,6 +5,7 @@ metadata:
   namespace: gateway
   annotations:
     cert-manager.io/cluster-issuer: cloudflare
+    external-dns.alpha.kubernetes.io/target: cluster.benwoodward.cloud.
 spec:
   gatewayClassName: cilium
   listeners:
