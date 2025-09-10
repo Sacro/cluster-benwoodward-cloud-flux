@@ -30,7 +30,7 @@ spec:
           groups:
             - count: 1000
               paths:
-                - path: /dev/dri
+                - path: /dev/dri/*
         name: generic-device-plugin
         resources:
           requests:
