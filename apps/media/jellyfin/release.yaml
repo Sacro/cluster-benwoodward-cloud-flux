@@ -34,4 +34,4 @@ spec:
     resources:
       requests:
         limits:
-          squat.ai/dri: 1
+          squat.ai/dri: "1"
