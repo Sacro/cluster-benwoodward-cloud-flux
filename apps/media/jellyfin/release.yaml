@@ -30,4 +30,8 @@ spec:
       affinity:
         podAffinity: false
       nodeSelector:
-        kubernetes.io/arch: amd64
+        kubernetes.io/arch: arm64
+    resources:
+      requests:
+        limits:
+          squat.ai/dri: 1
