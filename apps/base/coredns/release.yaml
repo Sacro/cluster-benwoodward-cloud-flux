@@ -59,6 +59,11 @@ spec:
               fallthrough in-addr.arpa ip6.arpa
               ttl 30
 
+          - name: rewrite
+            parameters: stop
+            configBlock: |-
+              name suffix .cluster.benwoodward.network .svc.cluster.local answer auto
+
           - name: forward
             parameters: . /etc/resolv.conf
             configBlock: |-
