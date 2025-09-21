@@ -17,6 +17,10 @@ spec:
   # https://github.com/k8s-gateway/k8s_gateway/tree/master/charts/k8s-gateway
   values:
     domain: benwoodward.cloud
+    service:
+      type: ClusterIP
+      clusterIP: 10.96.0.11
+      port: 53
     watchedResources:
       - Ingress
       - Service
@@ -25,5 +29,3 @@ spec:
       - HTTPRoute
       - TLSRoute
       - GRPCRoute
-    service:
-      clusterIP: 10.96.0.11
