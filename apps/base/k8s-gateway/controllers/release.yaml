@@ -1,0 +1,28 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: k8s_gateway
+  namespace: kube-system
+spec:
+  chart:
+    spec:
+      chart: k8s-gateway # yes, it has a dash not an underscore...
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: k8s_gateway
+      version: 3.x.x
+  interval: 1m0s
+  # https://github.com/k8s-gateway/k8s_gateway/tree/master/charts/k8s-gateway
+  values:
+    watchedResources:
+      - Ingress
+      - Service
+      - DNSEndpoint
+      # Cilium support - https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/gateway-api/
+      - HTTPRoute
+      - TLSRoute
+      - GRPCRoute
+    service:
+      clusterIP: 10.96.0.11
