@@ -16,6 +16,7 @@ spec:
   interval: 1m0s
   # https://github.com/k8s-gateway/k8s_gateway/tree/master/charts/k8s-gateway
   values:
+    domain: benwoodward.cloud
     watchedResources:
       - Ingress
       - Service
