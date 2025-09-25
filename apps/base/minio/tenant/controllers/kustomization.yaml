@@ -4,7 +4,6 @@ kind: Kustomization
 namespace: minio-tenant
 resources:
   - namespace.yaml
-  - release.yaml
   - storage-configuration.secret.yaml
   - storage-user.secret.yaml
   - tenant.yaml
