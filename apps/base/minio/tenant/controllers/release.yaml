@@ -15,4 +15,10 @@ spec:
       version: 7.x.x
   interval: 1m0s
   # https://github.com/minio/operator/blob/master/helm/tenant/values.yaml
-  values: {}
+  values:
+    tenant:
+      name: minio
+      pools:
+        - name: pool-0
+          servers: 4
+          storageClassName: longhorn-no-replicate
