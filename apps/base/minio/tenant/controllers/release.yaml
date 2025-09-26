@@ -20,5 +20,5 @@ spec:
       name: minio
       pools:
         - name: pool-0
-          servers: 4
+          servers: 3
           storageClassName: longhorn-no-replicate
