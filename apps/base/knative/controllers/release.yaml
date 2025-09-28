@@ -1,0 +1,18 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: knative-operator
+  namespace: knative-operator
+spec:
+  chart:
+    spec:
+      chart: knative-operator
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: knative-operator
+      version: 1.x.x
+  interval: 1m0s
+  # https://github.com/knative/operator/blob/be16de3b7abff4bd08139a7afaedbc831aab3a58/config/charts/knative-operator/values.yaml
+  values: {}
