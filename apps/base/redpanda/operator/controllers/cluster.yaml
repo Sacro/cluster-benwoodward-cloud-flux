@@ -21,3 +21,6 @@ spec:
           mountPath: /etc/redpanda-io-config
       additionalRedpandaCmdFlags:
         - "--io-properties-file=/etc/redpanda-io-config/io-config.yaml"
+    storage:
+      persistantVolume:
+        storageClass: longhorn-no-replicate
