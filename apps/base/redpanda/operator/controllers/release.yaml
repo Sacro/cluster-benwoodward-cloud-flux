@@ -16,5 +16,7 @@ spec:
   interval: 1m0s
   #
   values:
+    crds:
+      enabled: true
     monitoring:
       enabled: true
