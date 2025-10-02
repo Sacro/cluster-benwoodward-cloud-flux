@@ -17,5 +17,5 @@ spec:
   # https://github.com/redpanda-data/helm-charts/blob/main/charts/connect/values.yaml
   values:
     streams:
-      enable: true
+      enabled: true
       streamsConfigMap: connect-streams
