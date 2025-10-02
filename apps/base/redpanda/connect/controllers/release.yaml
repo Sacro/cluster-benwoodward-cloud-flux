@@ -14,5 +14,5 @@ spec:
         name: redpanda-connect
       version: v3.x.x
   interval: 1m0s
-  #
+  # https://github.com/redpanda-data/helm-charts/blob/main/charts/connect/values.yaml
   values: {}
