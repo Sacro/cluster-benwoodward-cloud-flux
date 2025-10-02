@@ -15,4 +15,7 @@ spec:
       version: v3.x.x
   interval: 1m0s
   # https://github.com/redpanda-data/helm-charts/blob/main/charts/connect/values.yaml
-  values: {}
+  values:
+    streams:
+      enable: true
+      streamsConfigMap: connect-streams
