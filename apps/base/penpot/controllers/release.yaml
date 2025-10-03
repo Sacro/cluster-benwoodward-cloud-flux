@@ -18,7 +18,11 @@ spec:
   values:
     config:
       postgresql:
+        host: pg-cluster-rw
+        database: app
+
         existingSecret: pg-cluster-app
         secretKeys:
-          postgresqlUriKey: uri
+          usernameKey: username
+          passwordKey: password
       publicUri: "https://penpot.benwoodward.cloud"
