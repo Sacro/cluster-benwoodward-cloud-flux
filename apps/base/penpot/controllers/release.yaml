@@ -17,4 +17,8 @@ spec:
   # https://github.com/penpot/penpot-helm/blob/develop/charts/penpot/values.yaml
   values:
     config:
+      postgresql:
+        existingSecret: pg-cluster-app
+        secretKeys:
+          postgresqlUriKey: uri
       publicUri: "https://penpot.benwoodward.cloud"
