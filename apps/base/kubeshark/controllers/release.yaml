@@ -12,5 +12,5 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: kubeshark
-      version: 52.8.x
+      version: 52.9.x
   interval: 1m0s
