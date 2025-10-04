@@ -15,4 +15,6 @@ spec:
       version: 5.x.x
   interval: 1m0s
   # https://github.com/grafana/mimir/blob/main/operations/helm/charts/mimir-distributed/values.yaml
-  values: {}
+  values:
+    global:
+      dnsService: coredns
