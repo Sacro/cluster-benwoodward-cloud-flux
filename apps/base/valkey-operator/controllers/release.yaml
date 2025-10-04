@@ -12,6 +12,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: valkey-operator
-      version: 0.x.x
+      version: 0.0.60-chart
   interval: 1m0s
   values: {}

@@ -26,3 +26,5 @@ spec:
           usernameKey: username
           passwordKey: password
       publicUri: "https://penpot.benwoodward.cloud"
+    global:
+      valkeyEnabled: true
