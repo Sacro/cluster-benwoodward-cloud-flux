@@ -16,6 +16,8 @@ spec:
   interval: 1m0s
   # https://github.com/grafana/loki/tree/main/production/helm/loki
   values:
+    global:
+      dnsService: coredns
     loki:
       schemaConfig:
         configs:
