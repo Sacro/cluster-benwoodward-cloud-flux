@@ -32,7 +32,7 @@ discovery.kubernetes "pods" {
 }
 
 discovery.relabel "pod_logs" {
-  targets = discovery.kubernetes.pod.targets
+  targets = discovery.kubernetes.pods.targets
 
   // Label creation - "namespace" field from "__meta_kubernetes_namespace"
   rule {
