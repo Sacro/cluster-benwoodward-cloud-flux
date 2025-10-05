@@ -134,6 +134,7 @@ prometheus.scrape "default" {
 
 loki.write "default" {
   endpoint {
+    tenant_id = "benwoodward.cloud"
     url = "http://loki-gateway.loki/api/v1/push"
   }
 }
