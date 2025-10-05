@@ -6,3 +6,9 @@ resources:
   - namespace.yaml
   - release.yaml
   - repository.yaml
+configMapGenerator:
+  - name: alloy
+    files:
+      - config.alloy
+    options:
+      disableNameSuffixHash: true
