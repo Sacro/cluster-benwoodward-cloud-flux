@@ -14,5 +14,10 @@ spec:
         name: alloy
       version: 1.x.x
   interval: 1m0s
-  #
-  values: {}
+  # https://github.com/grafana/alloy/tree/main/operations/helm/charts/alloy/values.yaml
+  values:
+    alloy:
+      clustering:
+        enabled: true
+    controller:
+      type: statefulset
