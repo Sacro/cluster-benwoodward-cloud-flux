@@ -18,6 +18,6 @@ spec:
   values:
     alloy:
       clustering:
-        enabled: true
+        enabled: false
     controller:
-      type: statefulset
+      type: daemonset
