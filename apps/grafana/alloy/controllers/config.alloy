@@ -132,6 +132,15 @@ prometheus.scrape "default" {
   forward_to = [prometheus.remote_write.default.receiver]
 }
 
+prometheus.exporter.unix "localhost" {
+  include_exporter_metrics = true
+}
+
+prometheus.scrape "node" {
+  targets   = prometheus.exporter.unix.localhost.targets
+  forward_to = [prometheus.remote_write.default.receiver]
+}
+
 loki.write "default" {
   endpoint {
     tenant_id = "benwoodward-cloud"
