@@ -14,5 +14,5 @@ spec:
         name: node-feature-discovery
       version: 0.x.x
   interval: 1m0s
-  #
+  # https://kubernetes-sigs.github.io/node-feature-discovery/v0.18/deployment/helm.html#configuration
   values: {}
