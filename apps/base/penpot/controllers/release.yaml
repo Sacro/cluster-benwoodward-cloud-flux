@@ -26,5 +26,15 @@ spec:
           usernameKey: username
           passwordKey: password
       publicUri: "https://penpot.benwoodward.cloud"
+
+    backend:
+      nodeSelector:
+        kubernetes.io/arch: arm64
+    exporter:
+      nodeSelector:
+        kubernetes.io/arch: arm64
+    frontend:
+      nodeSelector:
+        kubernetes.io/arch: arm64
     global:
       valkeyEnabled: true
