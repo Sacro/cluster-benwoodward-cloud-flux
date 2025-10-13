@@ -165,9 +165,6 @@ otelcol.auth.basic "grafanacloud" {
 
 discovery.kubelet "kubelet" {
   bearer_token_file = "/var/run/secrets/kubernetes.io/serviceaccount/token"
-  tls_config {
-    cert_file = "/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
-  }
 }
 
 prometheus.scrape "kubelet" {
