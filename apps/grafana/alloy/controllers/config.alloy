@@ -162,6 +162,17 @@ otelcol.auth.basic "grafanacloud" {
 }
 
 // Prometheus Configuration
+
+discovery.kubelet "kubelet" {
+  bearer_token_file = "/var/run/secrets/kubernetes.io/serviceaccount/token"
+}
+
+prometheus.scrape "kubelet" {
+  targets    = discovery.kubelet.kubelet.targets
+  forward_to = [prometheus.remote_write.grafanacloud.receiver]
+}
+
+// Target is defined already for Loki usage
 prometheus.scrape "pods" {
   targets    = discovery.kubernetes.pods.targets
   forward_to = [prometheus.remote_write.grafanacloud.receiver]
