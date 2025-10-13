@@ -20,4 +20,6 @@ spec:
       clustering:
         enabled: false
     controller:
+      podLabels:
+        pod-security.kubernetes.io/enforce: privileged
       type: daemonset
