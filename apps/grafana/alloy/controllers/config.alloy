@@ -125,10 +125,10 @@ loki.write "default" {
 
 loki.write "grafanacloud" {
   endpoint {
-    url = remote.kubernetes.secret.grafanacloud.data["loki_url"]
+    url = convert.nonsensitive(remote.kubernetes.secret.grafanacloud.data["loki_url"])
 
     basic_auth {
-      username = remote.kubernetes.secret.grafanacloud.data["loki_username"]
+      username = convert.nonsensitive(remote.kubernetes.secret.grafanacloud.data["loki_username"])
       password = remote.kubernetes.secret.grafanacloud.data["loki_password"]
     }
   }
@@ -151,13 +151,13 @@ otelcol.receiver.otlp "otlp_receiver" {
 // OTEL Exporters
 otelcol.exporter.otlp "grafanacloud" {
   client {
-    endpoint = remote.kubernetes.secret.grafanacloud.data["otel_endpoint"]
+    endpoint = convert.nonsensitive(remote.kubernetes.secret.grafanacloud.data["otel_endpoint"])
     auth = otelcol.auth.basic.grafanacloud.handler
   }
 }
 
 otelcol.auth.basic "grafanacloud" {
-  username = remote.kubernetes.secret.grafanacloud.data["otel_username"]
+  username = convert.nonsensitive(remote.kubernetes.secret.grafanacloud.data["otel_username"])
   password = remote.kubernetes.secret.grafanacloud.data["otel_password"]
 }
 
@@ -203,10 +203,10 @@ prometheus.remote_write "default" {
 
 prometheus.remote_write "grafanacloud" {
   endpoint {
-    url = remote.kubernetes.secret.grafanacloud.data["prometheus_url"]
+    url = convert.nonsensitive(remote.kubernetes.secret.grafanacloud.data["prometheus_url"])
 
     basic_auth {
-      username = remote.kubernetes.secret.grafanacloud.data["prometheus_username"]
+      username = convert.nonsensitive(remote.kubernetes.secret.grafanacloud.data["prometheus_username"])
       password = remote.kubernetes.secret.grafanacloud.data["prometheus_password"]
     }
   }
