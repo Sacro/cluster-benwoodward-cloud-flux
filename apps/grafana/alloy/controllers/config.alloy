@@ -164,6 +164,7 @@ otelcol.auth.basic "grafanacloud" {
 // Prometheus Configuration
 
 discovery.kubelet "kubelet" {
+  url               = "https://127.0.0.1:10250"
   bearer_token_file = "/var/run/secrets/kubernetes.io/serviceaccount/token"
 }
 
