@@ -4,4 +4,4 @@ kind: Namespace
 metadata:
   name: alloy
   labels:
-    pod-security.kubernetes.io/enforce: privileged
+    security.kubernetes.io/enforce: privileged
