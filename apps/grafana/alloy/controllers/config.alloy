@@ -163,6 +163,10 @@ otelcol.auth.basic "grafanacloud" {
 
 // Prometheus Configuration
 
+prometheus.operator.servicemonitors "servicemonitors" {
+  forward_to = [prometheus.remote_write.grafanacloud.receiver]
+}
+
 discovery.kubelet "kubelet" {
   bearer_token_file = "/var/run/secrets/kubernetes.io/serviceaccount/token"
 }
