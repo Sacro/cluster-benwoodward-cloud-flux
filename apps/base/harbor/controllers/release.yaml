@@ -71,7 +71,7 @@ spec:
     nginx:
       image:
         repository: ghcr.io/octohelm/harbor/nginx-photon
-        tag: v2.13.0
+        tag: v2.14.0
 
     portal:
       image:
