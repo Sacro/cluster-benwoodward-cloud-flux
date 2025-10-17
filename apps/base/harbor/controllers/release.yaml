@@ -50,7 +50,7 @@ spec:
     core:
       image:
         repository: ghcr.io/octohelm/harbor/harbor-core
-        tag: v2.13.0
+        tag: v2.14.0
 
     # database:
     #   internal:
