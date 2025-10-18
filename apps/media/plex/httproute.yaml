@@ -14,6 +14,12 @@ spec:
         - path:
             type: PathPrefix
             value: /
+      filters:
+        - type: RequestHeaderModifier
+          requestHeaderModifier:
+            set:
+              - name: "Host"
+                value: "192.168.15.254"
       backendRefs:
         - name: plex
           port: 32400
