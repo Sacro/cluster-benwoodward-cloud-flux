@@ -164,7 +164,7 @@ otelcol.auth.basic "grafanacloud" {
 // Prometheus Configuration
 
 prometheus.operator.servicemonitors "servicemonitors" {
-  forward_to = [prometheus.remote_write.grafanacloud.receiver]
+  forward_to = []
 }
 
 discovery.kubelet "kubelet" {
@@ -173,13 +173,13 @@ discovery.kubelet "kubelet" {
 
 prometheus.scrape "kubelet" {
   targets    = discovery.kubelet.kubelet.targets
-  forward_to = [prometheus.remote_write.grafanacloud.receiver]
+  forward_to = []
 }
 
 // Target is defined already for Loki usage
 prometheus.scrape "pods" {
   targets    = discovery.kubernetes.pods.targets
-  forward_to = [prometheus.remote_write.grafanacloud.receiver]
+  forward_to = []
 }
 
 discovery.kubernetes "services" {
@@ -188,7 +188,7 @@ discovery.kubernetes "services" {
 
 prometheus.scrape "services" {
   targets    = discovery.kubernetes.services.targets
-  forward_to = [prometheus.remote_write.grafanacloud.receiver]
+  forward_to = []
 }
 
 prometheus.exporter.self "default" {
@@ -196,7 +196,7 @@ prometheus.exporter.self "default" {
 
 prometheus.scrape "default" {
   targets    = prometheus.exporter.self.default.targets
-  forward_to = [prometheus.remote_write.grafanacloud.receiver]
+  forward_to = []
 }
 
 prometheus.exporter.unix "localhost" {
@@ -205,7 +205,7 @@ prometheus.exporter.unix "localhost" {
 
 prometheus.scrape "node" {
   targets   = prometheus.exporter.unix.localhost.targets
-  forward_to = [prometheus.remote_write.grafanacloud.receiver]
+  forward_to = []
 }
 
 // Prometheus Exporters
