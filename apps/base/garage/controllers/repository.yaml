@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 10m
   ref:
-    branch: main
+    branch: main-v1
   timeout: 1m
   url: https://git.deuxfleurs.fr/Deuxfleurs/garage/
   sparseCheckout:
