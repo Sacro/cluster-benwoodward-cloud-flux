@@ -18,7 +18,7 @@ spec:
   values:
     persistence:
       meta:
-        storageClass: "longhorn-no-repliate"
+        storageClass: "longhorn-no-replicate"
         size: 100Mi
       data:
         storageClass: "longhorn-no-replicate"
