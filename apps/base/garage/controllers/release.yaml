@@ -1,0 +1,25 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: garage
+  namespace: kube-system
+spec:
+  chart:
+    spec:
+      chart: script/helm/garage
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: GitRepository
+        name: garage-source
+      version: 0.x.x
+  interval: 1m0s
+  # https://git.deuxfleurs.fr/Deuxfleurs/garage/src/branch/main-v1/script/helm/garage/values.yaml
+  values:
+    persistence:
+      meta:
+        storageClass: "longhorn-no-repliate"
+        size: 100Mi
+      data:
+        storageClass: "longhorn-no-replicate"
+        size: 1Gi
