@@ -62,12 +62,8 @@ spec:
           - name: rewrite
             parameters: stop
             configBlock: |-
-              name suffix .svc.cluster.benwoodward.network .svc.cluster.local answer auto
-
-          - name: rewrite
-            parameters: stop
-            configBlock: |-
               name suffix .pod.cluster.benwoodward.network .pod.cluster.local answer auto
+              name suffix .svc.cluster.benwoodward.network .svc.cluster.local answer auto
 
           - name: forward
             parameters: . /etc/resolv.conf
