@@ -16,6 +16,8 @@ spec:
   interval: 1m0s
   # https://git.deuxfleurs.fr/Deuxfleurs/garage/src/branch/main-v1/script/helm/garage/values.yaml
   values:
+    image:
+      repository: dxflrs/garage
     persistence:
       meta:
         storageClass: "longhorn-no-replicate"
