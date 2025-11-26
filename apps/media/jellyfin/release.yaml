@@ -19,7 +19,7 @@ spec:
   values:
     persistence:
       config:
-        size: 10Gi
+        size: 25Gi
       data:
         enabled: true
         type: nfs
