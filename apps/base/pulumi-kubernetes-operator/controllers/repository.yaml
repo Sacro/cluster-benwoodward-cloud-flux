@@ -7,4 +7,4 @@ metadata:
 spec:
   interval: 1m0s
   type: oci
-  url: oci://ghcr.io/pulumi/helm-charts/pulumi-kubernetes-operator
+  url: oci://ghcr.io/pulumi/helm-charts
