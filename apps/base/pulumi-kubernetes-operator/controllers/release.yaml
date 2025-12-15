@@ -1,0 +1,17 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: pulumi-kubernetes-operator
+  namespace: pulumi-kubernetes-operator
+spec:
+  chart:
+    spec:
+      chart: pulumi-kubernetes-operator
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: pulumi-kubernetes-operator
+      version: 2.x.x
+  interval: 1m0s
+  # values: {}
