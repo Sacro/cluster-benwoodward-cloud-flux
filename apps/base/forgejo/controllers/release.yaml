@@ -14,11 +14,14 @@ spec:
         name: forgejo
       version: 15.x.x
   interval: 1m0s
-  # https://code.forgejo.org/forgejo-helm/forgejo-helm/src/branch/main/values.yaml
+  # https://codeberg.org/forgejo-contrib/forgejo-helm/src/branch/main/values.yaml
   values:
     gitea:
       additionalConfigSources:
         - secret:
             secretName: pg-cluster-app
-    server:
-      ROOT_URL: https://forgejo.benwoodward.cloud
+      server:
+        ROOT_URL: https://forgejo.benwoodward.cloud
+
+    persistence:
+      enabled: true
