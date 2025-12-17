@@ -10,7 +10,7 @@ spec:
       chart: forgejo
       reconcileStrategy: ChartVersion
       sourceRef:
-        kind: GitRepository
+        kind: HelmRepository
         name: forgejo
       version: 15.x.x
   interval: 1m0s
