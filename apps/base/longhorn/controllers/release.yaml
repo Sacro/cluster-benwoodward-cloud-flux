@@ -14,3 +14,10 @@ spec:
         name: longhorn-repo
       version: 1.10.1
   interval: 1m0s
+  # https://github.com/longhorn/longhorn/blob/master/chart/values.yaml
+  values:
+    // TODO: remove when new version releases
+    image:
+      manager:
+        tag: v1.10.1-hotfix-2
+    upgradeVersionCheck: false
