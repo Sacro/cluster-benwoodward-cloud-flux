@@ -1,0 +1,16 @@
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: pg-cluster
+  namespace: forgejo
+spec:
+  instances: 3
+  description: "Forgejo DB"
+  # affinity:
+  #   nodeSelector:
+  #     kubernetes.io/arch: arm64
+  primaryUpdateStrategy: unsupervised
+  storage:
+    storageClass: longhorn-no-replicate
+    size: 10Gi
