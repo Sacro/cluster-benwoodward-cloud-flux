@@ -4,6 +4,7 @@ kind: Kustomization
 namespace: forgejo
 resources:
   - database.yaml
+  - httproute.yaml
   - namespace.yaml
   - release.yaml
   - repository.yaml
