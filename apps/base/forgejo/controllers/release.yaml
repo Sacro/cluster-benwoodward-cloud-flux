@@ -14,11 +14,18 @@ spec:
         name: forgejo
       version: 15.x.x
   interval: 1m0s
-  # https://codeberg.org/forgejo-contrib/forgejo-helm/src/branch/main/values.yaml
+  # https://code.forgejo.org/forgejo-helm/forgejo-helm/src/branch/main/values.yaml
   values:
     gitea:
       additionalConfigSources:
         - secret:
             secretName: pg-cluster-app
+    httproute:
+      enabled: true
+      hostnames:
+        - forgejo.benwoodward.cloud
+      parentRefs:
+        - name: cilium-gateway
+          namespace: gateway
     persistence:
       enabled: true
