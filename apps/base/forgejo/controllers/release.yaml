@@ -20,6 +20,5 @@ spec:
       additionalConfigSources:
         - secret:
             secretName: pg-cluster-app
-
-  persistence:
-    enabled: true
+    persistence:
+      enabled: true
