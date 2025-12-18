@@ -20,8 +20,6 @@ spec:
       additionalConfigSources:
         - secret:
             secretName: pg-cluster-app
-      server:
-        ROOT_URL: https://forgejo.benwoodward.cloud
 
-    persistence:
-      enabled: true
+  persistence:
+    enabled: true
