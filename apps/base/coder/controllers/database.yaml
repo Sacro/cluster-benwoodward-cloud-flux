@@ -6,9 +6,9 @@ metadata:
 spec:
   instances: 3
   description: "Coder DB"
-  # affinity:
-  #   nodeSelector:
-  #     kubernetes.io/arch: arm64
+  affinity:
+    nodeSelector:
+      kubernetes.io/arch: arm64
   primaryUpdateStrategy: unsupervised
   storage:
     storageClass: longhorn-no-replicate
