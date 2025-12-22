@@ -17,5 +17,5 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: http
-          port: 80
+        - name: redpanda-connect
+          port: 4195
