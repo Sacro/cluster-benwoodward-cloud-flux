@@ -18,4 +18,4 @@ spec:
             value: /
       backendRefs:
         - name: redpanda-connect
-          port: 4195
+          port: 80
