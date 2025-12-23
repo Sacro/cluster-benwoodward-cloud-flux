@@ -14,7 +14,7 @@ spec:
         name: redpanda-operator
       version: 25.3.1
   interval: 1m0s
-  #
+  # https://docs.redpanda.com/current/reference/k-redpanda-helm-spec/
   values:
     crds:
       enabled: true
