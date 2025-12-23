@@ -6,10 +6,16 @@ metadata:
   namespace: redpanda
 spec:
   clusterSpec:
-    #enterprise:
-      #licenseSecretRef:
-        #name: <secret-name>
-        #key: <secret-key>
+    # enterprise:
+    #   licenseSecretRef:
+    #     name: <secret-name>
+    #     key: <secret-key>
+    external:
+      addresses:
+        - cluster-0
+        - cluster-1
+        - cluster-2
+      domain: redpanda.benwoodward.cloud
     storage:
       persistentVolume:
         storageClass: longhorn-no-replicate
