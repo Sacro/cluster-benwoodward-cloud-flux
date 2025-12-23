@@ -15,7 +15,7 @@ spec:
         - cluster-0
         - cluster-1
         - cluster-2
-      domain: redpanda.benwoodward.cloud
+      domain: redpanda.svc.cluster.benwoodward.network
     storage:
       persistentVolume:
         storageClass: longhorn-no-replicate
