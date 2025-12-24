@@ -13,6 +13,8 @@ spec:
         name: nats
       version: 2.x
   interval: 1m0s
+
+  # https://github.com/nats-io/k8s/blob/main/helm/charts/nats/values.yaml
   values:
     config:
       cluster:
@@ -26,6 +28,7 @@ spec:
           pvc:
             enabled: true
             size: 10Gi
+            storageClassName: longhorn-no-replicate
 
     podTemplate:
       topologySpreadConstraints:
