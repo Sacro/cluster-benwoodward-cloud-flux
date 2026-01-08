@@ -2,16 +2,16 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: tempo
-  namespace: tempo
+  name: pyroscope
+  namespace: pyroscope
 spec:
   chart:
     spec:
-      chart: tempo-distributed
+      chart: pyroscope
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: tempo
+        name: pyroscope
       version: 1.x
   interval: 1m0s
   # https://github.com/grafana/pyroscope/blob/main/operations/pyroscope/helm/pyroscope/values.yaml
