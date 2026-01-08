@@ -18,7 +18,7 @@ loki.source.kubernetes_events "cluster_events" {
 }
 
 loki.process "cluster_events" {
-  forward_to = [loki.write.grafanacloud.receiver]
+  forward_to = [loki.write.default.receiver]
 
   stage.static_labels {
     values = {
@@ -113,7 +113,7 @@ loki.process "pod_logs" {
       }
   }
 
-  forward_to = [loki.write.grafanacloud.receiver]
+  forward_to = [loki.write.default.receiver]
 }
 
 loki.write "default" {
@@ -135,20 +135,49 @@ loki.write "grafanacloud" {
 }
 
 // OTEL Configuration
+
+/// Receiver -> Processor
 otelcol.receiver.otlp "otlp_receiver" {
   grpc {
     endpoint = "0.0.0.0:4317"
   }
+
   http {
     endpoint = "0.0.0.0:4318"
   }
 
   output {
-    traces = [otelcol.exporter.otlp.grafanacloud.input,]
+    metrics = [otelcol.processor.batch.example.input]
+    logs    = [otelcol.processor.batch.example.input]
+    traces  = [otelcol.processor.batch.example.input]
   }
 }
 
-// OTEL Exporters
+/// Processor -> Exporter
+/// Metrics: Mimir (known as Prometheus)
+/// Logs: Loki
+/// Traces: Tempo
+otelcol.processor.batch "default" {
+  output {
+    metrics = [otelcol.exporter.prometheus.default.input]
+    logs    = [otelcol.exporter.loki.default.input]
+    // traces  = [otelcol.exporter.loki.default.input]
+  }
+}
+
+// OTEL Exporters //
+
+/// Metrics
+otelcol.exporter.prometheus "default" {
+  forward_to = [prometheus.remote_write.default.receiver]
+}
+
+/// Logs
+otelcol.exporter.loki "default" {
+  forward_to = [loki.write.default.receiver]
+}
+
+/// Traces
 otelcol.exporter.otlp "grafanacloud" {
   client {
     endpoint = convert.nonsensitive(remote.kubernetes.secret.grafanacloud.data["otel_endpoint"])
@@ -164,7 +193,7 @@ otelcol.auth.basic "grafanacloud" {
 // Prometheus Configuration
 
 prometheus.operator.servicemonitors "servicemonitors" {
-  forward_to = []
+  forward_to = [prometheus.remote_write.default.receiver]
 }
 
 discovery.kubelet "kubelet" {
@@ -173,13 +202,13 @@ discovery.kubelet "kubelet" {
 
 prometheus.scrape "kubelet" {
   targets    = discovery.kubelet.kubelet.targets
-  forward_to = []
+  forward_to = [prometheus.remote_write.default.receiver]
 }
 
 // Target is defined already for Loki usage
 prometheus.scrape "pods" {
   targets    = discovery.kubernetes.pods.targets
-  forward_to = []
+  forward_to = [prometheus.remote_write.default.receiver]
 }
 
 discovery.kubernetes "services" {
@@ -188,7 +217,7 @@ discovery.kubernetes "services" {
 
 prometheus.scrape "services" {
   targets    = discovery.kubernetes.services.targets
-  forward_to = []
+  forward_to = [prometheus.remote_write.default.receiver]
 }
 
 prometheus.exporter.self "default" {
@@ -196,7 +225,7 @@ prometheus.exporter.self "default" {
 
 prometheus.scrape "default" {
   targets    = prometheus.exporter.self.default.targets
-  forward_to = []
+  forward_to = [prometheus.remote_write.default.receiver]
 }
 
 prometheus.exporter.unix "localhost" {
@@ -205,7 +234,7 @@ prometheus.exporter.unix "localhost" {
 
 prometheus.scrape "node" {
   targets   = prometheus.exporter.unix.localhost.targets
-  forward_to = []
+  forward_to = [prometheus.remote_write.default.receiver]
 }
 
 // Prometheus Exporters
