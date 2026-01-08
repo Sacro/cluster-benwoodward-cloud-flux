@@ -241,7 +241,7 @@ prometheus.scrape "node" {
 
 prometheus.remote_write "default" {
   endpoint {
-    url = "http://mimir-nginx.mimir/api/v1/push"
+    url = "http://mimir-gateway.mimir/api/v1/push"
   }
 }
 
