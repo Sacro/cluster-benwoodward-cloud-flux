@@ -180,7 +180,7 @@ otelcol.exporter.loki "default" {
 /// Traces
 otelcol.exporter.otlp "default" {
   client {
-    endpoint = "http://tempo-distributor.tempo:4317"
+    endpoint = "tempo-distributor.tempo:4317"
   }
 }
 
