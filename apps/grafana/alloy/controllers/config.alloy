@@ -156,12 +156,12 @@ otelcol.receiver.otlp "otlp_receiver" {
 /// Processor -> Exporter
 /// Metrics: Mimir (known as Prometheus)
 /// Logs: Loki
-/// Traces: Tempo
+/// Traces: Tempo (OTLP)
 otelcol.processor.batch "default" {
   output {
     metrics = [otelcol.exporter.prometheus.default.input]
     logs    = [otelcol.exporter.loki.default.input]
-    // traces  = [otelcol.exporter.loki.default.input]
+    traces  = [otelcol.exporter.otlp.default.input]
   }
 }
 
@@ -178,6 +178,12 @@ otelcol.exporter.loki "default" {
 }
 
 /// Traces
+otelcol.exporter.otlp "default" {
+  client {
+    endpoint = "http://tempo-distributor.tempo:4317"
+  }
+}
+
 otelcol.exporter.otlp "grafanacloud" {
   client {
     endpoint = convert.nonsensitive(remote.kubernetes.secret.grafanacloud.data["otel_endpoint"])
