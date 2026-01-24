@@ -16,6 +16,8 @@ spec:
   interval: 1m0s
   # https://github.com/redpanda-data/helm-charts/blob/main/charts/connect/values.yaml
   values:
+    nodeSelector:
+      kubernetes.io/arch: arm64
     streams:
       enabled: true
       streamsConfigMap: connect-streams
