@@ -22,3 +22,5 @@ spec:
     crds:
       enabled: true
       keep: true
+    nodeSelector:
+      kubernetes.io/arch: arm64
