@@ -17,6 +17,8 @@ spec:
   # https://github.com/grafana/pyroscope/blob/main/operations/pyroscope/helm/pyroscope/values.yaml
   # orginal - https://raw.githubusercontent.com/grafana/pyroscope/main/operations/pyroscope/helm/pyroscope/values-micro-services.yaml
   values:
+    nodeSelector:
+      kubernetes.io/arch: arm64
     pyroscope:
       extraArgs:
         store-gateway.sharding-ring.replication-factor: "3"
