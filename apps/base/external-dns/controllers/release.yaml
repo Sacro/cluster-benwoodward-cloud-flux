@@ -21,6 +21,8 @@ spec:
           secretKeyRef:
             name: cloudflare-api-key
             key: apiKey
+    nodeSelector:
+      kubernetes.io/arch: arm64
     policy: sync
     provider:
       name: cloudflare
