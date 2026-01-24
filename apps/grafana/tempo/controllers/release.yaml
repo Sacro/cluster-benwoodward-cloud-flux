@@ -16,5 +16,7 @@ spec:
   interval: 1m0s
   # https://github.com/grafana/helm-charts/blob/main/charts/tempo-distributed/values.yaml
   values:
+    nodeSelector:
+      kubernetes.io/arch: arm64
     global:
       dnsService: coredns
