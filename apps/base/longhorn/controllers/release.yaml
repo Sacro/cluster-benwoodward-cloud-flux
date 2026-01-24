@@ -16,6 +16,9 @@ spec:
   interval: 1m0s
   # https://github.com/longhorn/longhorn/blob/master/chart/values.yaml
   values:
+    global:
+      nodeSelector:
+        kubernetes.io/arch: arm64
     // TODO: remove when new version releases
     image:
       manager:
