@@ -36,6 +36,9 @@ spec:
       targetPath: database.external.username
 
   values:
+    nodeSelector:
+      kubernetes.io/arch: arm64
+
     database:
       type: external # database credentials are done by valuesFrom above!
 
