@@ -50,14 +50,20 @@ spec:
     deploymentMode: SimpleScalable
 
     backend:
+      nodeSelector:
+        kubernetes.io/arch: arm64
       replicas: 3
       persistence:
         storageClass: longhorn-no-replicate
     read:
+      nodeSelector:
+        kubernetes.io/arch: arm64
       replicas: 3
       persistence:
         storageClass: longhorn-no-replicate
     write:
+      nodeSelector:
+        kubernetes.io/arch: arm64
       replicas: 3
       persistence:
         storageClass: longhorn-no-replicate
