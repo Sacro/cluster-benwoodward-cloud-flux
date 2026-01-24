@@ -1,55 +1,57 @@
 authentik:
-    error_reporting:
-        enabled: false
-    postgresql:
-        password: file:///postgres-creds/password
-    secret_key: file:///secrets/secret-key
+  error_reporting:
+    enabled: false
+  postgresql:
+    password: file:///postgres-creds/password
+  secret_key: file:///secrets/secret-key
 
 # TODO: enable
 geoip:
   enabled: false
 
 global:
-    volumes:
-        - name: authentik-postgresql
-          secret:
-            secretName: authentik-postgresql
-        - name: authentik-secrets
-          secret:
-            secretName: authentik
+  nodeSelector:
+    kubernetes.io/arch: arm64
+  volumes:
+    - name: authentik-postgresql
+      secret:
+        secretName: authentik-postgresql
+    - name: authentik-secrets
+      secret:
+        secretName: authentik
 
-    volumeMounts:
-        - name: authentik-postgresql
-          mountPath: /postgres-creds
-          readOnly: true
-        - name: authentik-secrets
-          mountPath: /secrets
-          readOnly: true
+  volumeMounts:
+    - name: authentik-postgresql
+      mountPath: /postgres-creds
+      readOnly: true
+    - name: authentik-secrets
+      mountPath: /secrets
+      readOnly: true
 
 postgresql:
   enabled: true
 
 prometheus:
-    rules:
-        enabled: true
+  rules:
+    enabled: true
 
 redis:
   enabled: true
 
 server:
-    env:
-        - name: TMPDIR
-          value: /tmp
-    ingress:
-        enabled: true
-        hosts:
-          - auth.benwoodward.cloud
+  env:
+    - name: TMPDIR
+      value: /tmp
+  ingress:
+    enabled: true
+    hosts:
+      - auth.benwoodward.cloud
 
-    metrics:
-        serviceMonitor:
-            enabled: true
+  metrics:
+    serviceMonitor:
+      enabled: true
 
 worker:
-    env:
-        - name: TMPDIR
-          value: /tmp
+  env:
+    - name: TMPDIR
+      value: /tmp
