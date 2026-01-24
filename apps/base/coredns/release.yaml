@@ -18,6 +18,8 @@ spec:
   values:
     isClusterService: true
     k8sAppLabelOverride: "kube-dns"
+    nodeSelector:
+      kubernetes.io/arch: arm64
     serviceType: ClusterIP
     service:
       clusterIP: 10.96.0.10
