@@ -14,5 +14,6 @@ spec:
       version: v1.16.x
   interval: 1m0s
   values:
-    nodeSelector:
-      kubernetes.io/arch: arm64
+    global:
+      nodeSelector:
+        kubernetes.io/arch: arm64
