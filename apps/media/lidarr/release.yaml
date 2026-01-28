@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: lidarr
-      version: 25.x.x
+      version: 28.x.x
   interval: 1m0s
   # https://github.com/trueforge-org/truecharts/blob/master/charts/stable/lidarr/values.yaml
   # https://github.com/trueforge-org/truecharts/blob/master/charts/library/common/values.yaml
