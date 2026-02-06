@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: longhorn-repo
-      version: 1.10.1
+      version: 1.11.0
   interval: 1m0s
   # https://github.com/longhorn/longhorn/blob/master/chart/values.yaml
   values:
@@ -21,5 +21,5 @@ spec:
     // TODO: remove when new version releases
     image:
       manager:
-        tag: v1.10.1-hotfix-2
+        tag: v1.11.0-hotfix-1
     upgradeVersionCheck: false
