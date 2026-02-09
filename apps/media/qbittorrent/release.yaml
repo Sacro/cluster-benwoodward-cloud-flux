@@ -31,3 +31,8 @@ spec:
         podAffinity: false
       nodeSelector:
         kubernetes.io/arch: arm64
+    service:
+      torrent:
+        ports:
+          torrent:
+            port: 61881
