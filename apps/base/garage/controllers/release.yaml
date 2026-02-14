@@ -18,6 +18,13 @@ spec:
   values:
     image:
       repository: dxflrs/garage
+    garage:
+      s3:
+        api:
+          region: cluster
+          rootDomain: garage.benwoodward.cloud
+        web:
+          rootDomain: garage.benwoodward.cloud
     persistence:
       meta:
         storageClass: "longhorn-no-replicate"
