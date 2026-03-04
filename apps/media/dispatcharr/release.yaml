@@ -1,0 +1,27 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: dispatcharr
+  namespace: media
+spec:
+  chart:
+    spec:
+      chart: dispatcharr
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: dispatcharr
+      version: 1.x.x
+  interval: 1m0s
+  # https://github.com/trueforge-org/truecharts/blob/master/charts/stable/dispatcharrc/values.yaml
+  # https://github.com/trueforge-org/truecharts/blob/master/charts/library/common/values.yaml
+  values:
+    persistence:
+      config:
+        size: 1Gi
+    podOptions:
+      affinity:
+        podAffinity: false
+      nodeSelector:
+        kubernetes.io/arch: arm64
