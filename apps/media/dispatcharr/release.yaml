@@ -20,6 +20,8 @@ spec:
     persistence:
       data:
         size: 10Gi
+      postgres-run:
+        size: 25Gi
     podOptions:
       affinity:
         podAffinity: false
