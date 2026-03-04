@@ -18,9 +18,8 @@ spec:
   # https://github.com/trueforge-org/truecharts/blob/master/charts/library/common/values.yaml
   values:
     persistence:
-      config:
-        enabled: true
-        size: 1Gi
+      data:
+        size: 10Gi
     podOptions:
       affinity:
         podAffinity: false
