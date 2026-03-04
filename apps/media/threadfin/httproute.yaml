@@ -16,4 +16,4 @@ spec:
             value: /
       backendRefs:
         - name: threadfin
-          port: 8096
+          port: 34400
