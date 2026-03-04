@@ -1,0 +1,27 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: threadfin
+  namespace: media
+spec:
+  chart:
+    spec:
+      chart: threadfin
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: threadfin
+      version: 2.x.x
+  interval: 1m0s
+  # https://github.com/trueforge-org/truecharts/blob/master/charts/stable/threadfin/values.yaml
+  # https://github.com/trueforge-org/truecharts/blob/master/charts/library/common/values.yaml
+  values:
+    persistence:
+      config:
+        size: 1Gb
+    podOptions:
+      affinity:
+        podAffinity: false
+      nodeSelector:
+        kubernetes.io/arch: arm64
