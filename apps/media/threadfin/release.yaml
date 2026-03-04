@@ -19,7 +19,7 @@ spec:
   values:
     persistence:
       config:
-        size: 1Gb
+        size: 1Gi
     podOptions:
       affinity:
         podAffinity: false
