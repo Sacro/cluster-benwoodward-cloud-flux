@@ -23,6 +23,12 @@ spec:
               key: uri
         - name: CODER_ACCESS_URL
           value: "https://coder.benwoodward.cloud"
+        - name: CODER_PROXY_TRUSTED_HEADERS
+          value: "X-Forwarded-For"
+        - name: CODER_PROXY_TRUSTED_ORIGINS
+          value: "192.168.15.0/24"
+        - name: CODER_HOST_PREFIX_COOKIE
+          value: true
       service:
         enable: true
         type: ClusterIP
