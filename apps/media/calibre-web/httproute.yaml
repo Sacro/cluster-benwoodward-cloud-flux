@@ -15,5 +15,5 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: calibre-web-webserver
+        - name: calibre-web
           port: 8083
