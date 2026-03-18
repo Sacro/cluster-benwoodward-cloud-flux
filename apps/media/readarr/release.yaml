@@ -32,3 +32,5 @@ spec:
     podOptions:
       affinity:
         podAffinity: false
+      nodeSelector:
+        kubernetes.io/arch: arm64
