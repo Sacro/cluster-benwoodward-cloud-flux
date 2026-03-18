@@ -17,6 +17,9 @@ spec:
   # https://github.com/trueforge-org/truecharts/blob/master/charts/stable/readarr/values.yaml
   # https://github.com/trueforge-org/truecharts/blob/master/charts/library/common/values.yaml
   values:
+    image:
+      repository: ghcr.io/faustvii/readarr
+      tag: sha256-18ff64a9376b718ff29183f85389ef3338750ae9fc386c720bdaff9e386f6c11
     persistence:
       config:
         size: 1Gi
