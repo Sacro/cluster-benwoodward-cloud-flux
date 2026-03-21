@@ -95,6 +95,7 @@ spec:
     bloomGateway:
       replicas: 0
 
+    # https://docs.siderolabs.com/talos/v1.6/learn-more/knowledge-base#logging-kubernetes-audit-logs-with-loki
     promtail:
       extraArgs:
         - -config.expand-env
