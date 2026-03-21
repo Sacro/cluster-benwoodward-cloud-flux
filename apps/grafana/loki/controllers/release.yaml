@@ -94,3 +94,31 @@ spec:
       replicas: 0
     bloomGateway:
       replicas: 0
+
+    promtail:
+      extraArgs:
+        - -config.expand-env
+      # this is required so that the promtail process can read the kube-apiserver audit logs written as `nobody` user
+      containerSecurityContext:
+        capabilities:
+          add:
+            - DAC_READ_SEARCH
+      extraVolumes:
+        - name: audit-logs
+          hostPath:
+            path: /var/log/audit/kube
+      extraVolumeMounts:
+        - name: audit-logs
+          mountPath: /var/log/audit/kube
+          readOnly: true
+      config:
+        snippets:
+          extraScrapeConfigs: |
+            - job_name: auditlogs
+              static_configs:
+                - targets:
+                    - localhost
+                  labels:
+                    job: auditlogs
+                    host: ${HOSTNAME}
+                    __path__: /var/log/audit/kube/*.log
