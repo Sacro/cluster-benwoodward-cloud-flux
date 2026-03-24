@@ -26,11 +26,7 @@ spec:
                 SLSKD_REMOTE_CONFIGURATION: true
     persistence:
       data:
-        enabled: true
-        type: nfs
-        server: 192.168.5.250
-        path: /volume1/NFS
-        mountPath: /nfs
+        size: 10Gi
       share:
         size: 10Gi
       incomplete:
