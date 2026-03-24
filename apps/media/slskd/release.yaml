@@ -17,6 +17,13 @@ spec:
   # https://github.com/trueforge-org/truecharts/blob/master/charts/stable/slskd/values.yaml
   # https://github.com/trueforge-org/truecharts/blob/master/charts/library/common/values.yaml
   values:
+    workload:
+      main:
+        podSpec:
+          containers:
+            main:
+              env:
+                SLSKD_REMOTE_CONFIGURATION: true
     persistence:
       data:
         enabled: true
