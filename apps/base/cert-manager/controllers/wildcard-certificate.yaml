@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: benwoodward-cloud-tls
-  namespace: gateway
+  namespace: cert-manager
 
 spec:
   secretName: benwoodward-cloud-tls

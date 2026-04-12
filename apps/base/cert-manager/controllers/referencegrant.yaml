@@ -6,9 +6,10 @@ metadata:
   namespace: cert-manager
 spec:
   from:
-  - group: gateway.networking.k8s.io
-    kind: Gateway
-    namespace: gateway
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      namespace: gateway
   to:
-  - group: ""
-    kind: Secret
+    - group: ""
+      kind: Secret
+      name: benwoodward-cloud-tls

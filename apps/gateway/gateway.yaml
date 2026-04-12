@@ -14,10 +14,11 @@ spec:
       name: https-gateway
       hostname: "*.benwoodward.cloud"
       tls:
+        mode: Terminate
         certificateRefs:
           - kind: Secret
             name: benwoodward-cloud-tls
-            namespace: gateway
+            namespace: cert-manager # cross-namespace certificate reference
       allowedRoutes:
         namespaces:
           from: All
