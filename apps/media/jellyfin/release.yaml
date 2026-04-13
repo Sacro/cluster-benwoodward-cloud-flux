@@ -1,5 +1,5 @@
 ---
-apiVersion: helm.toolkit.fluxcd.io/v2beta2
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: jellyfin
@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: jellyfin
-      version: 22.x.x
+      version: 23.x.x
   interval: 1m0s
   # https://github.com/trueforge-org/truecharts/blob/master/charts/stable/plex/values.yaml
   # https://github.com/trueforge-org/truecharts/blob/master/charts/library/common/values.yaml
