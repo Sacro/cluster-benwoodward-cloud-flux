@@ -21,11 +21,12 @@ spec:
       config:
         size: 25Gi
       data:
-        enabled: true
-        type: nfs
-        server: 192.168.5.250
-        path: /volume1/NFS
-        mountPath: /nfs
+        size: 25Gi
+        # enabled: true
+        # type: nfs
+        # server: 192.168.5.250
+        # path: /volume1/NFS
+        # mountPath: /nfs
     podOptions:
       affinity:
         podAffinity: false
