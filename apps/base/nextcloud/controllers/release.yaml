@@ -15,4 +15,12 @@ spec:
       version: 9.x.x
   interval: 1m0s
   # https://github.com/nextcloud/helm/blob/main/charts/nextcloud/README.md
-  values: {}
+  values:
+    nextcloud:
+      host: nextcloud.benwoodward.cloud
+    persistance:
+      enabled: true
+      size: 8Gi
+      nextcloudData:
+        enabled: true
+        size: 8Gi
