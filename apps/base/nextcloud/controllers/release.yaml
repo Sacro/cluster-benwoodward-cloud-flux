@@ -16,6 +16,18 @@ spec:
   interval: 1m0s
   # https://github.com/nextcloud/helm/blob/main/charts/nextcloud/README.md
   values:
+    externalDatabase:
+      enabled: true
+      type: postgresql
+      existingSecret:
+        enabled: true
+        secretName: pg-cluster-app
+        usernameKey: username
+        passwordKey: password
+        hostKey: host
+        databaseKey: dbname
+    internalDatabase:
+      enabled: false
     nextcloud:
       host: nextcloud.benwoodward.cloud
     persistance:
