@@ -36,3 +36,6 @@ spec:
       nextcloudData:
         enabled: true
         size: 8Gi
+    service:
+      phpClientHttpsFix:
+        enabled: true
