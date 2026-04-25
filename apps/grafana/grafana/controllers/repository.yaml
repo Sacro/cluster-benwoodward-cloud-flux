@@ -2,9 +2,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: grafana
+  name: grafana-community
   namespace: grafana
 spec:
   interval: 1m0s
   type: oci
-  url: oci://ghcr.io/grafana-community/helm-charts/grafana
+  url: oci://ghcr.io/grafana-community/helm-charts

@@ -11,7 +11,7 @@ spec:
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: tempo
+        name: grafana-community
       version: 1.x
   interval: 1m0s
   # https://github.com/grafana-community/helm-charts/blob/main/charts/tempo/values.yaml

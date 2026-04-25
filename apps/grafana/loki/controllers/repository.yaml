@@ -2,9 +2,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: loki
+  name: grafana-community
   namespace: loki
 spec:
   interval: 1m0s
   type: oci
-  url: oci://ghcr.io/grafana-community/helm-charts/loki
+  url: oci://ghcr.io/grafana-community/helm-charts
