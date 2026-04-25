@@ -123,3 +123,12 @@ spec:
                     job: auditlogs
                     host: ${HOSTNAME}
                     __path__: /var/log/audit/kube/*.log
+
+    route:
+      main:
+        enabled: true
+        hostnames:
+          - loki.benwoodward.cloud
+        parentRefs:
+          - name: cilium-gateway
+            namespace: gateway

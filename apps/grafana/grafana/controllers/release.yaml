@@ -18,3 +18,11 @@ spec:
   values:
     persistence:
       enabled: true
+    route:
+      main:
+        enabled: true
+        hostnames:
+          - grafana.benwoodward.cloud
+        parentRefs:
+          - name: cilium-gateway
+            namespace: gateway
