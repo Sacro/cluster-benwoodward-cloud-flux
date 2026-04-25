@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: pyroscope
-      version: 1.x
+      version: 2.x
   interval: 1m0s
   # https://github.com/grafana/pyroscope/blob/main/operations/pyroscope/helm/pyroscope/values.yaml
   # orginal - https://raw.githubusercontent.com/grafana/pyroscope/main/operations/pyroscope/helm/pyroscope/values-micro-services.yaml
