@@ -6,4 +6,5 @@ metadata:
   namespace: loki
 spec:
   interval: 1m0s
-  url: https://grafana.github.io/helm-charts
+  type: oci
+  url: oci://ghcr.io/grafana-community/helm-charts/loki
