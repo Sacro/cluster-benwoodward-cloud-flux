@@ -14,7 +14,7 @@ spec:
         name: loki
       version: 7.x
   interval: 1m0s
-  # https://github.com/grafana/loki/tree/main/production/helm/loki
+  # https://github.com/grafana-community/helm-charts/blob/main/charts/loki/values.yaml
   values:
     global:
       dnsService: coredns

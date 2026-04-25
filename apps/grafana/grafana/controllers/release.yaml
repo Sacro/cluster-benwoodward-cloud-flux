@@ -14,7 +14,7 @@ spec:
         name: grafana
       version: 10.x.x
   interval: 1m0s
-  # https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml
+  # https://github.com/grafana-community/helm-charts/blob/main/charts/grafana/values.yaml
   values:
     persistence:
       enabled: true
