@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: grafana-community
-      version: 1.x
+      version: 2.x
   interval: 1m0s
   # https://github.com/grafana-community/helm-charts/blob/main/charts/tempo/values.yaml
   values:

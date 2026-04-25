@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: grafana-community
-      version: 7.x
+      version: 13.x
   interval: 1m0s
   # https://github.com/grafana-community/helm-charts/blob/main/charts/loki/values.yaml
   values:

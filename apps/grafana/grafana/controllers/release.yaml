@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: grafana-community
-      version: 10.x.x
+      version: 12.x.x
   interval: 1m0s
   # https://github.com/grafana-community/helm-charts/blob/main/charts/grafana/values.yaml
   values:
