@@ -91,7 +91,7 @@ spec:
       replicas: 3
 
     minio:
-      enabled: false
+      enabled: true
 
     overrides_exporter:
       replicas: 1
