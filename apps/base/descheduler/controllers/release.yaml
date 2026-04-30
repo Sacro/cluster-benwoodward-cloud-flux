@@ -13,8 +13,8 @@ spec:
         name: descheduler
       interval: 60m
       # https://github.com/kubernetes-sigs/descheduler/blob/master/charts/descheduler/values.yaml
-    values:
-      kind: Deployment
-      leaderElection:
-        enabled: true
-      replicas: 3
+      values:
+        kind: Deployment
+        leaderElection:
+          enabled: true
+        replicas: 3
