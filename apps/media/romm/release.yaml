@@ -34,8 +34,8 @@ spec:
     podOptions:
       affinity:
         podAffinity: false
-      # nodeSelector:
-      #   kubernetes.io/arch: arm64
+      nodeSelector:
+        kubernetes.io/arch: arm64
     redis:
       enabled: true # TODO: switch to redis operator
     workload:
