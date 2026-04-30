@@ -1,13 +1,19 @@
 ---
+# Some ideas taken from https://medium.com/@camphul/cloudnative-pg-in-the-homelab-with-longhorn-b08c40b85384
+
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: longhorn-no-replicate
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+provisioner: driver.longhorn.io
 allowVolumeExpansion: true
+volumeBindingMode: WaitForFirstConsumer
 parameters:
   dataEngine: v1
-  dataLocality: best-effort # means that it can move pods if needed
+  dataLocality: "best-effort" # means that it can move pods if needed
   disableRevisionCounter: "true"
   fsType: ext4
   numberOfReplicas: "1"
-provisioner: driver.longhorn.io
+  staleReplicaTimeout: "1440" # 1 day
