@@ -35,4 +35,4 @@ spec:
         kubernetes.io/arch: arm64
     resources:
       limits:
-        device.es/dri: "1"
+        devic.es/dri: "1"
