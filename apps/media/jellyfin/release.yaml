@@ -35,4 +35,4 @@ spec:
         kubernetes.io/arch: arm64
     resources:
       limits:
-        squat.ai/dri: "1"
+        device.es/dri: "1"
